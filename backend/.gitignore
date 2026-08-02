@@ -1,27 +1,18 @@
 # Maven
 target/
 
-# IntelliJ IDEA
+# IDE
 .idea/
 *.iml
-
-# Eclipse
-.project
-.classpath
-.settings/
+.vscode/
 
 # Logs
 logs/
 *.log
 
-# Runtime data (external JSON storage)
-data/
-*.json
+# Runtime data
+data/transactions.json
 
-# Temporary files
-*.tmp
-*.swp
-*.swo
-
-# Java
-*.class
+# Node
+node_modules/
+dist/
