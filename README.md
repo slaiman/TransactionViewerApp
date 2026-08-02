@@ -72,9 +72,9 @@ mvn -version
 
 ## 1. Clone the project
 
-git clone <repository-url>
+git clone <https://github.com/slaiman/TransactionViewerApp.git>
 
-cd transaction-app
+cd TransactionViewerApp
 
 
 ## 2. Configure application properties
@@ -83,19 +83,25 @@ cd transaction-app
 Example:
 application.properties
 spring.application.name=transaction-viewer-backend
-server.port=8080
+server.port=8081
+
 #this property is used by the flush method to determine the scheduled delay to execute the flush method
 app.persistence.flush-delay=1000
+
 #enable virtual threads
 spring.threads.virtual.enabled=true
+
 # Path (relative to the working directory the app is run from) where the
 # JSON data file lives. Seeded automatically from
 src/main/resources/data/transactions.json
+
 # on first run if it doesn't already exist.
 app.data.externalFile=D://transactions.json
 app.data.internalFile=classpath:data/transactions.json
+
 # Pretty-print JSON responses for easier manual inspection during development
 spring.jackson.serialization.indent-output=true
+
 #log path property
 LOG_PATH=/opt/transaction-app/logs
 ```
@@ -128,13 +134,6 @@ Required for Java 8 date/time types:
 
 Used for reducing boilerplate code.
 
-## Running the Backend
-
-using Maven (you must be in the backend root folder in CMD):
-
-```
-mvn spring-boot:run
-```
 
 ## Runtime Data Initialization
 
@@ -261,11 +260,21 @@ The frontend provides:
 
 - Transaction reversal
 
-Run frontend (you must be in the frontend root folder in CMD):
+## Running the Application
 
-npm install
+From the project root (/scripts folder), execute:
 
-npm run dev
+## run.bat
+
+This script starts:
+- Spring Boot backend
+- React frontend
+
+The backend runs on:
+http://localhost:8081 (port number is configurable in "application.properties")
+
+The frontend runs on:
+http://localhost:5174 (port number is configurable in "vite.config.ts")
 
 ## AI Usage Summary
 

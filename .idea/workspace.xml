@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/logs/application.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/logs/transactions.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/transactions.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;slaiman&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/slaiman/TransactionViewerApp.git&quot;,
+    &quot;accountId&quot;: &quot;63be80be-5eb6-413a-b3c5-63c1d23910a5&quot;
+  }
+}</component>
   <component name="MavenRunner">
     <option name="jreName" value="21" />
   </component>
@@ -34,39 +55,42 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TransactionViewerApplication.executor": "Debug",
-    "Maven.TransactionViewerApp [clean].executor": "Run",
-    "Maven.TransactionViewerApp [compile].executor": "Run",
-    "Maven.TransactionViewerApp [install].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-install-plugin:3.1.4:install].executor": "Run",
-    "Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor": "Run",
-    "Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:start].executor": "Run",
-    "Maven.TransactionViewerApp [package].executor": "Run",
-    "Maven.transaction-viewer-backend [clean].executor": "Run",
-    "Maven.transaction-viewer-backend [compile].executor": "Run",
-    "Maven.transaction-viewer-backend [install].executor": "Run",
-    "Maven.transaction-viewer-backend [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS/IdeaProjects/TransactionViewerApp/backend",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TransactionViewerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.TransactionViewerApp [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-install-plugin:3.1.4:install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:start].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/IdeaProjects/TransactionViewerApp/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend" />
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\scripts" />
     </key>
   </component>
   <component name="RunManager">
@@ -99,5 +123,16 @@
       <updated>1785521534126</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
