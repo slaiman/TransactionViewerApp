@@ -1,0 +1,27 @@
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Logs
+logs/
+*.log
+
+# Runtime data (external JSON storage)
+data/
+*.json
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Java
+*.class

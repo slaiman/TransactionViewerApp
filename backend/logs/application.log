@@ -1,0 +1,891 @@
+2026-08-02 02:24:41 INFO  c.neo.TransactionViewerApplication - Starting TransactionViewerApplication using Java 21.0.10 with PID 26436 (C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend)
+2026-08-02 02:24:41 INFO  c.neo.TransactionViewerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-02 02:24:42 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-02 02:24:43 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-02 02:24:43 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:24:43 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-02 02:24:43 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-02 02:24:43 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1157 ms
+2026-08-02 02:24:43 INFO  c.n.s.TransactionPersistenceService - Initializing transaction persistence service
+2026-08-02 02:24:43 INFO  c.n.s.TransactionPersistenceService - Start Loading transactions from files
+2026-08-02 02:24:43 INFO  c.n.repository.TransactionRepository - Executing 'load' method in TransactionRepository
+2026-08-02 02:24:43 INFO  c.n.repository.TransactionRepository - 2502 transactions loaded
+2026-08-02 02:24:43 INFO  c.n.s.TransactionPersistenceService - Finished Loading transactions from files
+2026-08-02 02:24:43 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:24:43 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-02 02:24:43 INFO  c.neo.TransactionViewerApplication - Started TransactionViewerApplication in 2.849 seconds (process running for 3.313)
+2026-08-02 02:24:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:24:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:25:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush
+2026-08-02 02:26:27 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02 02:26:27 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-02 02:28:10 INFO  c.neo.TransactionViewerApplication - Starting TransactionViewerApplication using Java 21.0.10 with PID 11184 (C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend)
+2026-08-02 02:28:10 INFO  c.neo.TransactionViewerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-02 02:28:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-02 02:28:11 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-02 02:28:11 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:28:11 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-02 02:28:11 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-02 02:28:11 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1131 ms
+2026-08-02 02:28:11 INFO  c.n.s.TransactionPersistenceService - Initializing transaction persistence service
+2026-08-02 02:28:11 INFO  c.n.s.TransactionPersistenceService - Start Loading transactions from files
+2026-08-02 02:28:11 INFO  c.n.repository.TransactionRepository - Executing 'load' method in TransactionRepository
+2026-08-02 02:28:11 INFO  c.n.repository.TransactionRepository - 2502 transactions loaded
+2026-08-02 02:28:11 INFO  c.n.s.TransactionPersistenceService - Finished Loading transactions from files
+2026-08-02 02:28:12 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:28:12 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-02 02:28:12 INFO  c.neo.TransactionViewerApplication - Started TransactionViewerApplication in 2.704 seconds (process running for 3.182)
+2026-08-02 02:28:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:12.206265800Z
+2026-08-02 02:28:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:13.223783200Z
+2026-08-02 02:28:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:14.240436200Z
+2026-08-02 02:28:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:15.249655600Z
+2026-08-02 02:28:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:16.261985600Z
+2026-08-02 02:28:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:17.275806400Z
+2026-08-02 02:28:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:18.289062500Z
+2026-08-02 02:28:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:19.301545300Z
+2026-08-02 02:28:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:20.316486800Z
+2026-08-02 02:28:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:21.328136300Z
+2026-08-02 02:28:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:22.338666Z
+2026-08-02 02:28:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:23.351530700Z
+2026-08-02 02:28:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:24.359034300Z
+2026-08-02 02:28:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:25.371015700Z
+2026-08-02 02:28:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:26.386495500Z
+2026-08-02 02:28:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:27.400118600Z
+2026-08-02 02:28:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:28.413880500Z
+2026-08-02 02:28:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:29.428402200Z
+2026-08-02 02:28:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:30.433031900Z
+2026-08-02 02:28:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:31.444618800Z
+2026-08-02 02:28:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:32.455570Z
+2026-08-02 02:28:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:33.468913300Z
+2026-08-02 02:28:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:34.481867200Z
+2026-08-02 02:28:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-02 02:28:35 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-02 02:28:35 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-02 02:28:35 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:28:35 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:28:35 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:28:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:35.496751500Z
+2026-08-02 02:28:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:36.505259300Z
+2026-08-02 02:28:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:37.517307800Z
+2026-08-02 02:28:38 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:28:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:38.530601200Z
+2026-08-02 02:28:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:39.540930Z
+2026-08-02 02:28:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:40.552293400Z
+2026-08-02 02:28:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:41.565954400Z
+2026-08-02 02:28:42 INFO  com.neo.service.TransactionService - Reverse request received transactionId=txn-000946
+2026-08-02 02:28:42 INFO  c.n.repository.TransactionRepository - Executing 'findById' method in TransactionRepository
+2026-08-02 02:28:42 INFO  c.n.repository.TransactionRepository - Executing 'update' method in TransactionRepository
+2026-08-02 02:28:42 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:28:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:42.575103300Z
+2026-08-02 02:28:42 INFO  c.n.repository.TransactionRepository - Executing 'findAllTransactions' method in TransactionRepository
+2026-08-02 02:28:42 INFO  c.n.s.TransactionPersistenceService - Transaction persistence completed batchSize=2502
+2026-08-02 02:28:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:43.649114300Z
+2026-08-02 02:28:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:44.663461200Z
+2026-08-02 02:28:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:45.672833200Z
+2026-08-02 02:28:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:46.686610200Z
+2026-08-02 02:28:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:47.698451400Z
+2026-08-02 02:28:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:48.713449400Z
+2026-08-02 02:28:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:49.730669100Z
+2026-08-02 02:28:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:50.742348300Z
+2026-08-02 02:28:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:51.750115300Z
+2026-08-02 02:28:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:52.752839Z
+2026-08-02 02:28:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:53.760951200Z
+2026-08-02 02:28:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:54.776525100Z
+2026-08-02 02:28:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:55.790839500Z
+2026-08-02 02:28:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:56.797928500Z
+2026-08-02 02:28:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:57.809990500Z
+2026-08-02 02:28:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:58.822540200Z
+2026-08-02 02:28:59 INFO  com.neo.service.TransactionService - Creating new transaction for accountId=acc-023
+2026-08-02 02:28:59 INFO  c.n.repository.TransactionRepository - Executing 'save' method in TransactionRepository
+2026-08-02 02:28:59 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:28:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:28:59.826251300Z
+2026-08-02 02:28:59 INFO  c.n.repository.TransactionRepository - Executing 'findAllTransactions' method in TransactionRepository
+2026-08-02 02:28:59 INFO  c.n.s.TransactionPersistenceService - Transaction persistence completed batchSize=2503
+2026-08-02 02:29:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:00.860412400Z
+2026-08-02 02:29:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:01.874701300Z
+2026-08-02 02:29:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:02.877633300Z
+2026-08-02 02:29:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:03.879997900Z
+2026-08-02 02:29:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:04.892483300Z
+2026-08-02 02:29:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:05.904369200Z
+2026-08-02 02:29:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:06.914963100Z
+2026-08-02 02:29:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:07.916345400Z
+2026-08-02 02:29:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:08.933022600Z
+2026-08-02 02:29:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:09.944455700Z
+2026-08-02 02:29:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:10.956744900Z
+2026-08-02 02:29:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:11.973461100Z
+2026-08-02 02:29:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:12.988851200Z
+2026-08-02 02:29:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:14.003031100Z
+2026-08-02 02:29:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:15.016824300Z
+2026-08-02 02:29:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:16.022138300Z
+2026-08-02 02:29:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:17.036155Z
+2026-08-02 02:29:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:18.048384Z
+2026-08-02 02:29:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:19.063065900Z
+2026-08-02 02:29:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:20.070458400Z
+2026-08-02 02:29:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:21.083535600Z
+2026-08-02 02:29:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:22.095672300Z
+2026-08-02 02:29:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:23.098096300Z
+2026-08-02 02:29:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:24.113376Z
+2026-08-02 02:29:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:25.128303600Z
+2026-08-02 02:29:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:26.142310600Z
+2026-08-02 02:29:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:27.143848800Z
+2026-08-02 02:29:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:28.147468400Z
+2026-08-02 02:29:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:29.159350300Z
+2026-08-02 02:29:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:30.162091900Z
+2026-08-02 02:29:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:31.174255500Z
+2026-08-02 02:29:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:32.187581900Z
+2026-08-02 02:29:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:33.192778700Z
+2026-08-02 02:29:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:34.207589200Z
+2026-08-02 02:29:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:35.218997400Z
+2026-08-02 02:29:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:36.225743800Z
+2026-08-02 02:29:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:37.239221500Z
+2026-08-02 02:29:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:38.249236800Z
+2026-08-02 02:29:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:39.263119400Z
+2026-08-02 02:29:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:40.269993300Z
+2026-08-02 02:29:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:41.274178500Z
+2026-08-02 02:29:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:42.288956Z
+2026-08-02 02:29:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:43.302135300Z
+2026-08-02 02:29:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:44.312541200Z
+2026-08-02 02:29:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:45.314647200Z
+2026-08-02 02:29:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:46.317420500Z
+2026-08-02 02:29:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:47.332475800Z
+2026-08-02 02:29:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:48.346727400Z
+2026-08-02 02:29:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:49.359379100Z
+2026-08-02 02:29:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:50.372992400Z
+2026-08-02 02:29:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:51.389132200Z
+2026-08-02 02:29:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:52.391318900Z
+2026-08-02 02:29:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:53.404749200Z
+2026-08-02 02:29:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:54.417167500Z
+2026-08-02 02:29:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:55.432658500Z
+2026-08-02 02:29:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:56.435195900Z
+2026-08-02 02:29:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:57.451856Z
+2026-08-02 02:29:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:58.464365Z
+2026-08-02 02:29:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:29:59.477633900Z
+2026-08-02 02:30:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:00.478501100Z
+2026-08-02 02:30:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:01.492315500Z
+2026-08-02 02:30:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:02.503476500Z
+2026-08-02 02:30:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:03.511253800Z
+2026-08-02 02:30:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:04.522780400Z
+2026-08-02 02:30:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:05.534388300Z
+2026-08-02 02:30:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:06.540431200Z
+2026-08-02 02:30:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:07.553099400Z
+2026-08-02 02:30:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:08.562014900Z
+2026-08-02 02:30:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:09.573649800Z
+2026-08-02 02:30:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:10.589506900Z
+2026-08-02 02:30:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:11.600770500Z
+2026-08-02 02:30:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:12.612293900Z
+2026-08-02 02:30:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:13.614779300Z
+2026-08-02 02:30:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:14.627664Z
+2026-08-02 02:30:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:15.638237Z
+2026-08-02 02:30:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:16.650543900Z
+2026-08-02 02:30:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:17.661783800Z
+2026-08-02 02:30:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:18.676273500Z
+2026-08-02 02:30:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:19.687268400Z
+2026-08-02 02:30:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:20.702310700Z
+2026-08-02 02:30:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:21.712274600Z
+2026-08-02 02:30:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:22.722377600Z
+2026-08-02 02:30:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:23.738221500Z
+2026-08-02 02:30:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:24.752865900Z
+2026-08-02 02:30:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:25.753633300Z
+2026-08-02 02:30:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:26.766267600Z
+2026-08-02 02:30:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:27.779415900Z
+2026-08-02 02:30:28 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:30:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:28.792377200Z
+2026-08-02 02:30:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:29.800995800Z
+2026-08-02 02:30:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:30.812772600Z
+2026-08-02 02:30:31 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:30:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:31.821872200Z
+2026-08-02 02:30:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:32.832538300Z
+2026-08-02 02:30:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:33.844309400Z
+2026-08-02 02:30:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:34.860375400Z
+2026-08-02 02:30:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:35.861607500Z
+2026-08-02 02:30:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:36.872556Z
+2026-08-02 02:30:36 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:30:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:37.881628600Z
+2026-08-02 02:30:37 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:30:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:38.891380600Z
+2026-08-02 02:30:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:39.902488900Z
+2026-08-02 02:30:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:40.911704800Z
+2026-08-02 02:30:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:41.922233700Z
+2026-08-02 02:30:42 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:30:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:42.931429Z
+2026-08-02 02:30:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:43.938425200Z
+2026-08-02 02:30:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:44.947642Z
+2026-08-02 02:30:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:45.959220800Z
+2026-08-02 02:30:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:46.967838400Z
+2026-08-02 02:30:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:47.979365600Z
+2026-08-02 02:30:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:48.988795700Z
+2026-08-02 02:30:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:49.997753900Z
+2026-08-02 02:30:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:51.007637500Z
+2026-08-02 02:30:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:52.022262400Z
+2026-08-02 02:30:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:53.033720600Z
+2026-08-02 02:30:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:54.045461800Z
+2026-08-02 02:30:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:55.056785700Z
+2026-08-02 02:30:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:56.059023700Z
+2026-08-02 02:30:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:57.073046400Z
+2026-08-02 02:30:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:58.081868800Z
+2026-08-02 02:30:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:30:59.089758800Z
+2026-08-02 02:31:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:00.103432200Z
+2026-08-02 02:31:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:01.109561700Z
+2026-08-02 02:31:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:02.121835600Z
+2026-08-02 02:31:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:03.136410600Z
+2026-08-02 02:31:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:04.147919400Z
+2026-08-02 02:31:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:05.161745200Z
+2026-08-02 02:31:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:06.174751900Z
+2026-08-02 02:31:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:07.182693900Z
+2026-08-02 02:31:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:08.194302100Z
+2026-08-02 02:31:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:09.201817900Z
+2026-08-02 02:31:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:10.215108900Z
+2026-08-02 02:31:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:11.231111100Z
+2026-08-02 02:31:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:12.241882800Z
+2026-08-02 02:31:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:13.254305500Z
+2026-08-02 02:31:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:14.263512200Z
+2026-08-02 02:31:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:15.276143800Z
+2026-08-02 02:31:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:16.288206300Z
+2026-08-02 02:31:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:17.298447Z
+2026-08-02 02:31:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:18.314561100Z
+2026-08-02 02:31:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:19.325276900Z
+2026-08-02 02:31:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:20.334798500Z
+2026-08-02 02:31:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:21.342655400Z
+2026-08-02 02:31:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:22.343946600Z
+2026-08-02 02:31:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:23.355221300Z
+2026-08-02 02:31:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:24.368030300Z
+2026-08-02 02:31:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:25.378675500Z
+2026-08-02 02:31:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:26.385610800Z
+2026-08-02 02:31:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:27.394920900Z
+2026-08-02 02:31:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:28.407701Z
+2026-08-02 02:31:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:29.421846800Z
+2026-08-02 02:31:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:30.431253400Z
+2026-08-02 02:31:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:31.440367100Z
+2026-08-02 02:31:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:32.451314700Z
+2026-08-02 02:31:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:33.460150700Z
+2026-08-02 02:31:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:34.472584400Z
+2026-08-02 02:31:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:35.486167300Z
+2026-08-02 02:31:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:36.498018800Z
+2026-08-02 02:31:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:37.510206300Z
+2026-08-02 02:31:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:38.534082900Z
+2026-08-02 02:31:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:39.578410600Z
+2026-08-02 02:31:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:40.589837400Z
+2026-08-02 02:31:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:41.604248Z
+2026-08-02 02:31:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:42.611406800Z
+2026-08-02 02:31:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:43.623873100Z
+2026-08-02 02:31:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:44.632718500Z
+2026-08-02 02:31:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:45.644089900Z
+2026-08-02 02:31:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:46.660586300Z
+2026-08-02 02:31:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:47.669097Z
+2026-08-02 02:31:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:48.681317200Z
+2026-08-02 02:31:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:49.692755500Z
+2026-08-02 02:31:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:50.700306700Z
+2026-08-02 02:31:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:51.709691200Z
+2026-08-02 02:31:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:52.722666800Z
+2026-08-02 02:31:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:53.739677100Z
+2026-08-02 02:31:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:54.754406500Z
+2026-08-02 02:31:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:55.763484Z
+2026-08-02 02:31:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:56.772472Z
+2026-08-02 02:31:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:57.784870700Z
+2026-08-02 02:31:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:58.793134500Z
+2026-08-02 02:31:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:31:59.799663800Z
+2026-08-02 02:32:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:00.813374300Z
+2026-08-02 02:32:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:01.822784200Z
+2026-08-02 02:32:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:02.839953700Z
+2026-08-02 02:32:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:03.854948200Z
+2026-08-02 02:32:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:04.866842100Z
+2026-08-02 02:32:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:05.880499700Z
+2026-08-02 02:32:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:06.888163600Z
+2026-08-02 02:32:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:07.896109100Z
+2026-08-02 02:32:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:08.898180100Z
+2026-08-02 02:32:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:09.913836200Z
+2026-08-02 02:32:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:10.923877200Z
+2026-08-02 02:32:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:11.934726Z
+2026-08-02 02:32:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:12.947583400Z
+2026-08-02 02:32:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:13.960529200Z
+2026-08-02 02:32:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:14.971548100Z
+2026-08-02 02:32:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:15.983177600Z
+2026-08-02 02:32:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:16.991374900Z
+2026-08-02 02:32:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:18.005135600Z
+2026-08-02 02:32:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:19.018545800Z
+2026-08-02 02:32:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:20.033112400Z
+2026-08-02 02:32:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:21.044976Z
+2026-08-02 02:32:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:22.049059Z
+2026-08-02 02:32:22 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:32:22 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:32:22 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:32:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:23.058463200Z
+2026-08-02 02:32:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:24.068893200Z
+2026-08-02 02:32:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:25.082432200Z
+2026-08-02 02:32:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:26.091781800Z
+2026-08-02 02:32:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:27.105481Z
+2026-08-02 02:32:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:28.114713Z
+2026-08-02 02:32:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:29.126017300Z
+2026-08-02 02:32:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:30.143602300Z
+2026-08-02 02:32:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:31.154669Z
+2026-08-02 02:32:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:32.163167200Z
+2026-08-02 02:32:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:33.175891900Z
+2026-08-02 02:32:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:34.185730200Z
+2026-08-02 02:32:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:35.197488500Z
+2026-08-02 02:32:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:36.209968700Z
+2026-08-02 02:32:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:37.221436300Z
+2026-08-02 02:32:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:38.230996200Z
+2026-08-02 02:32:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:39.234543300Z
+2026-08-02 02:32:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:40.247463900Z
+2026-08-02 02:32:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:41.258592800Z
+2026-08-02 02:32:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:42.268446600Z
+2026-08-02 02:32:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:43.274762600Z
+2026-08-02 02:32:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:44.278485400Z
+2026-08-02 02:32:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:45.279599500Z
+2026-08-02 02:32:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:46.289823700Z
+2026-08-02 02:32:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:47.303291900Z
+2026-08-02 02:32:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:48.315664400Z
+2026-08-02 02:32:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:49.327295900Z
+2026-08-02 02:32:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:50.340970Z
+2026-08-02 02:32:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:51.356083500Z
+2026-08-02 02:32:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:52.369100800Z
+2026-08-02 02:32:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:53.381879200Z
+2026-08-02 02:32:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:54.391745100Z
+2026-08-02 02:32:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:55.402455400Z
+2026-08-02 02:32:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:56.415742700Z
+2026-08-02 02:32:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:57.425760100Z
+2026-08-02 02:32:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:58.438122900Z
+2026-08-02 02:32:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:32:59.445671200Z
+2026-08-02 02:33:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:00.453717500Z
+2026-08-02 02:33:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:01.464278900Z
+2026-08-02 02:33:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:02.478525500Z
+2026-08-02 02:33:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:03.488944100Z
+2026-08-02 02:33:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:04.499283100Z
+2026-08-02 02:33:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:05.508381100Z
+2026-08-02 02:33:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:06.518179700Z
+2026-08-02 02:33:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:07.533626400Z
+2026-08-02 02:33:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:08.546437600Z
+2026-08-02 02:33:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:09.553695600Z
+2026-08-02 02:33:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:10.558879300Z
+2026-08-02 02:33:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:11.567302600Z
+2026-08-02 02:33:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:12.579060200Z
+2026-08-02 02:33:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:13.588432400Z
+2026-08-02 02:33:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:14.598045Z
+2026-08-02 02:33:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:15.608658600Z
+2026-08-02 02:33:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:16.615619300Z
+2026-08-02 02:33:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:17.630444300Z
+2026-08-02 02:33:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:18.639734700Z
+2026-08-02 02:33:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:19.651681700Z
+2026-08-02 02:33:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:20.666072400Z
+2026-08-02 02:33:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:21.678366800Z
+2026-08-02 02:33:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:22.690292Z
+2026-08-02 02:33:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:23.702526Z
+2026-08-02 02:33:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:24.716038900Z
+2026-08-02 02:33:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:25.720299400Z
+2026-08-02 02:33:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:26.723932400Z
+2026-08-02 02:33:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:27.728975400Z
+2026-08-02 02:33:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:28.740243600Z
+2026-08-02 02:33:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:29.749917300Z
+2026-08-02 02:33:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:30.762211900Z
+2026-08-02 02:33:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:31.763421Z
+2026-08-02 02:33:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:32.771304300Z
+2026-08-02 02:33:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:33.772214600Z
+2026-08-02 02:33:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:34.784383300Z
+2026-08-02 02:33:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:35.795222300Z
+2026-08-02 02:33:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:36.806541200Z
+2026-08-02 02:33:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:37.819174900Z
+2026-08-02 02:33:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:38.830724700Z
+2026-08-02 02:33:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:39.843965200Z
+2026-08-02 02:33:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:40.859865800Z
+2026-08-02 02:33:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:41.861564300Z
+2026-08-02 02:33:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:42.873578Z
+2026-08-02 02:33:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:43.885096100Z
+2026-08-02 02:33:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:44.885915400Z
+2026-08-02 02:33:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:45.896639600Z
+2026-08-02 02:33:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:46.910124700Z
+2026-08-02 02:33:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:47.918440500Z
+2026-08-02 02:33:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:48.928939600Z
+2026-08-02 02:33:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:49.935252700Z
+2026-08-02 02:33:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:50.938155300Z
+2026-08-02 02:33:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:51.940155600Z
+2026-08-02 02:33:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:52.942433500Z
+2026-08-02 02:33:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:53.948459400Z
+2026-08-02 02:33:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:54.956477500Z
+2026-08-02 02:33:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:55.969459200Z
+2026-08-02 02:33:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:56.982461800Z
+2026-08-02 02:33:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:57.989459500Z
+2026-08-02 02:33:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:33:58.996415300Z
+2026-08-02 02:34:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:00.008457100Z
+2026-08-02 02:34:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:01.026418400Z
+2026-08-02 02:34:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:02.033461900Z
+2026-08-02 02:34:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:03.047472300Z
+2026-08-02 02:34:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:04.053471300Z
+2026-08-02 02:34:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:05.069472100Z
+2026-08-02 02:34:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:06.076138600Z
+2026-08-02 02:34:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:07.086075400Z
+2026-08-02 02:34:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:08.101233800Z
+2026-08-02 02:34:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:09.114929800Z
+2026-08-02 02:34:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:10.125328500Z
+2026-08-02 02:34:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:11.139148900Z
+2026-08-02 02:34:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:12.150742900Z
+2026-08-02 02:34:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:13.159265900Z
+2026-08-02 02:34:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:14.171243400Z
+2026-08-02 02:34:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:15.183716Z
+2026-08-02 02:34:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:16.196679900Z
+2026-08-02 02:34:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:17.209462900Z
+2026-08-02 02:34:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:18.222725300Z
+2026-08-02 02:34:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:19.238861200Z
+2026-08-02 02:34:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:20.246604100Z
+2026-08-02 02:34:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:21.254402800Z
+2026-08-02 02:34:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:22.268276200Z
+2026-08-02 02:34:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:23.280293400Z
+2026-08-02 02:34:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:24.285862700Z
+2026-08-02 02:34:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:25.295505800Z
+2026-08-02 02:34:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:26.299742100Z
+2026-08-02 02:34:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:27.312106500Z
+2026-08-02 02:34:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:28.326529300Z
+2026-08-02 02:34:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:29.338464Z
+2026-08-02 02:34:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:30.339983900Z
+2026-08-02 02:34:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:31.351985100Z
+2026-08-02 02:34:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:32.355956500Z
+2026-08-02 02:34:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:33.365749400Z
+2026-08-02 02:34:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:34.377255200Z
+2026-08-02 02:34:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:35.391286800Z
+2026-08-02 02:34:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:36.405390100Z
+2026-08-02 02:34:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:37.419728100Z
+2026-08-02 02:34:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:38.435186400Z
+2026-08-02 02:34:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:39.448738600Z
+2026-08-02 02:34:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:40.462261200Z
+2026-08-02 02:34:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:41.476264200Z
+2026-08-02 02:34:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:42.489179900Z
+2026-08-02 02:34:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:43.505505300Z
+2026-08-02 02:34:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:44.518193800Z
+2026-08-02 02:34:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:45.528348Z
+2026-08-02 02:34:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:46.537370800Z
+2026-08-02 02:34:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:47.546329200Z
+2026-08-02 02:34:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:48.563067900Z
+2026-08-02 02:34:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:49.572518100Z
+2026-08-02 02:34:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:50.581704100Z
+2026-08-02 02:34:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:51.591523500Z
+2026-08-02 02:34:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:52.602464700Z
+2026-08-02 02:34:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:53.612080600Z
+2026-08-02 02:34:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:54.624917400Z
+2026-08-02 02:34:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:55.635661800Z
+2026-08-02 02:34:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:56.645835900Z
+2026-08-02 02:34:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:57.655759800Z
+2026-08-02 02:34:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:58.667082200Z
+2026-08-02 02:34:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:34:59.680335800Z
+2026-08-02 02:35:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:00.690567800Z
+2026-08-02 02:35:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:01.702205200Z
+2026-08-02 02:35:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:02.711036600Z
+2026-08-02 02:35:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:03.726494500Z
+2026-08-02 02:35:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:04.742029200Z
+2026-08-02 02:35:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:05.750830100Z
+2026-08-02 02:35:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:06.763779600Z
+2026-08-02 02:35:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:07.772271Z
+2026-08-02 02:35:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:08.782878100Z
+2026-08-02 02:35:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:09.785229800Z
+2026-08-02 02:35:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:10.785856600Z
+2026-08-02 02:35:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:11.800805300Z
+2026-08-02 02:35:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:12.809402Z
+2026-08-02 02:35:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:13.823789400Z
+2026-08-02 02:35:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:14.837099500Z
+2026-08-02 02:35:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:15.848401100Z
+2026-08-02 02:35:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:16.858979900Z
+2026-08-02 02:35:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:17.890317600Z
+2026-08-02 02:35:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:18.896495900Z
+2026-08-02 02:35:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:19.907068300Z
+2026-08-02 02:35:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:20.916679800Z
+2026-08-02 02:35:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:21.922926Z
+2026-08-02 02:35:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:22.935816300Z
+2026-08-02 02:35:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:23.951597300Z
+2026-08-02 02:35:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:24.961345100Z
+2026-08-02 02:35:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:25.967626500Z
+2026-08-02 02:35:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:26.982452Z
+2026-08-02 02:35:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:27.994940100Z
+2026-08-02 02:35:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:29.006218800Z
+2026-08-02 02:35:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:30.020287100Z
+2026-08-02 02:35:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:31.028400300Z
+2026-08-02 02:35:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:32.040246300Z
+2026-08-02 02:35:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:33.050284100Z
+2026-08-02 02:35:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:34.059822Z
+2026-08-02 02:35:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:35.072693700Z
+2026-08-02 02:35:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:36.079555100Z
+2026-08-02 02:35:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:37.089303200Z
+2026-08-02 02:35:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:38.101144Z
+2026-08-02 02:35:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:39.114305300Z
+2026-08-02 02:35:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:40.124964Z
+2026-08-02 02:35:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:41.125987900Z
+2026-08-02 02:35:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:42.130121200Z
+2026-08-02 02:35:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:43.138484300Z
+2026-08-02 02:35:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:44.150540400Z
+2026-08-02 02:35:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:45.161767400Z
+2026-08-02 02:35:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:46.164785600Z
+2026-08-02 02:35:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:47.175882900Z
+2026-08-02 02:35:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:48.191790900Z
+2026-08-02 02:35:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:49.203609700Z
+2026-08-02 02:35:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:50.211104900Z
+2026-08-02 02:35:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:51.225009500Z
+2026-08-02 02:35:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:52.233901100Z
+2026-08-02 02:35:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:53.246564500Z
+2026-08-02 02:35:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:54.252645700Z
+2026-08-02 02:35:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:55.260062600Z
+2026-08-02 02:35:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:56.261501300Z
+2026-08-02 02:35:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:57.268343900Z
+2026-08-02 02:35:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:58.280547900Z
+2026-08-02 02:35:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:35:59.289550600Z
+2026-08-02 02:36:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:00.305643800Z
+2026-08-02 02:36:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:01.309136Z
+2026-08-02 02:36:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:02.317029400Z
+2026-08-02 02:36:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:03.328749900Z
+2026-08-02 02:36:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:04.339388100Z
+2026-08-02 02:36:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:05.343675400Z
+2026-08-02 02:36:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:06.356946700Z
+2026-08-02 02:36:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:07.365606100Z
+2026-08-02 02:36:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:08.376949500Z
+2026-08-02 02:36:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:09.381330200Z
+2026-08-02 02:36:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:10.390707300Z
+2026-08-02 02:36:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:11.398124400Z
+2026-08-02 02:36:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:12.406092400Z
+2026-08-02 02:36:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:13.418489800Z
+2026-08-02 02:36:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:14.431118300Z
+2026-08-02 02:36:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:15.439856900Z
+2026-08-02 02:36:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:16.448564400Z
+2026-08-02 02:36:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:17.458930600Z
+2026-08-02 02:36:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:18.466569100Z
+2026-08-02 02:36:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:19.480668800Z
+2026-08-02 02:36:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:20.487050Z
+2026-08-02 02:36:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:21.501490700Z
+2026-08-02 02:36:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:22.517269600Z
+2026-08-02 02:36:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:23.524041900Z
+2026-08-02 02:36:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:24.534686900Z
+2026-08-02 02:36:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:25.546430800Z
+2026-08-02 02:36:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:26.551305800Z
+2026-08-02 02:36:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:27.562629Z
+2026-08-02 02:36:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:28.576728400Z
+2026-08-02 02:36:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:29.588452500Z
+2026-08-02 02:36:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:30.596438Z
+2026-08-02 02:36:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:31.606987600Z
+2026-08-02 02:36:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:32.608969400Z
+2026-08-02 02:36:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:33.621197700Z
+2026-08-02 02:36:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:34.632749500Z
+2026-08-02 02:36:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:35.635947700Z
+2026-08-02 02:36:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:36.648196Z
+2026-08-02 02:36:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:37.660850500Z
+2026-08-02 02:36:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:38.670877300Z
+2026-08-02 02:36:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:39.683514100Z
+2026-08-02 02:36:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:40.696339200Z
+2026-08-02 02:36:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:41.703567200Z
+2026-08-02 02:36:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:42.714554900Z
+2026-08-02 02:36:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:43.724748800Z
+2026-08-02 02:36:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:44.734888600Z
+2026-08-02 02:36:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:45.742795500Z
+2026-08-02 02:36:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:46.754385400Z
+2026-08-02 02:36:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:47.769158900Z
+2026-08-02 02:36:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:48.779932600Z
+2026-08-02 02:36:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:49.794733200Z
+2026-08-02 02:36:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:50.806774Z
+2026-08-02 02:36:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:51.818921600Z
+2026-08-02 02:36:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:52.823634200Z
+2026-08-02 02:36:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:53.824826300Z
+2026-08-02 02:36:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:54.830193600Z
+2026-08-02 02:36:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:55.843477300Z
+2026-08-02 02:36:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:36:56.857177300Z
+2026-08-02 02:36:57 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02 02:36:57 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-02 02:46:21 INFO  c.neo.TransactionViewerApplication - Starting TransactionViewerApplication using Java 21.0.10 with PID 1020 (C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend)
+2026-08-02 02:46:21 INFO  c.neo.TransactionViewerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-02 02:46:21 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-02 02:46:22 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-02 02:46:22 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:46:22 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-02 02:46:22 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-02 02:46:22 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1206 ms
+2026-08-02 02:46:22 INFO  c.n.s.TransactionPersistenceService - Initializing transaction persistence service
+2026-08-02 02:46:22 INFO  c.n.s.TransactionPersistenceService - Start Loading transactions from files
+2026-08-02 02:46:22 INFO  c.n.repository.TransactionRepository - Executing 'load' method in TransactionRepository
+2026-08-02 02:46:22 INFO  c.n.repository.TransactionRepository - 2503 transactions loaded
+2026-08-02 02:46:22 INFO  c.n.s.TransactionPersistenceService - Finished Loading transactions from files
+2026-08-02 02:46:23 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:46:23 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-02 02:46:23 INFO  c.neo.TransactionViewerApplication - Started TransactionViewerApplication in 3.162 seconds (process running for 3.63)
+2026-08-02 02:46:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:23.445761600Z
+2026-08-02 02:46:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:24.455806400Z
+2026-08-02 02:46:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:25.466775600Z
+2026-08-02 02:46:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:26.481401Z
+2026-08-02 02:46:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:27.483416200Z
+2026-08-02 02:46:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:28.491940Z
+2026-08-02 02:46:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:29.506495100Z
+2026-08-02 02:46:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:30.520160300Z
+2026-08-02 02:46:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:31.531624400Z
+2026-08-02 02:46:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:32.542064600Z
+2026-08-02 02:46:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:33.554301100Z
+2026-08-02 02:46:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:34.566747700Z
+2026-08-02 02:46:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:35.580114300Z
+2026-08-02 02:46:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:36.593697900Z
+2026-08-02 02:46:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:37.596304200Z
+2026-08-02 02:46:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:38.606995300Z
+2026-08-02 02:46:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:39.615305700Z
+2026-08-02 02:46:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:40.627096700Z
+2026-08-02 02:46:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:41.632966100Z
+2026-08-02 02:46:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:42.648039500Z
+2026-08-02 02:46:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:43.660911400Z
+2026-08-02 02:46:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:44.674878700Z
+2026-08-02 02:46:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:45.681759600Z
+2026-08-02 02:46:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:46.696950600Z
+2026-08-02 02:46:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:47.704176900Z
+2026-08-02 02:46:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:48.715211500Z
+2026-08-02 02:46:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:49.724802800Z
+2026-08-02 02:46:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:50.735785800Z
+2026-08-02 02:46:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:51.748311700Z
+2026-08-02 02:46:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:52.763272700Z
+2026-08-02 02:46:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:53.777202400Z
+2026-08-02 02:46:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:54.790397400Z
+2026-08-02 02:46:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:55.802264600Z
+2026-08-02 02:46:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:56.812930600Z
+2026-08-02 02:46:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:57.823559400Z
+2026-08-02 02:46:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:58.834561100Z
+2026-08-02 02:46:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:46:59.840174500Z
+2026-08-02 02:47:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:00.851663400Z
+2026-08-02 02:47:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:01.857738200Z
+2026-08-02 02:47:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:02.867270700Z
+2026-08-02 02:47:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:03.873687800Z
+2026-08-02 02:47:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:04.880932700Z
+2026-08-02 02:47:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:05.885987200Z
+2026-08-02 02:47:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:06.890323700Z
+2026-08-02 02:47:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:07.898296100Z
+2026-08-02 02:47:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:08.906813800Z
+2026-08-02 02:47:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:09.910334400Z
+2026-08-02 02:47:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:10.919276600Z
+2026-08-02 02:47:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:11.921635200Z
+2026-08-02 02:47:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:12.934864Z
+2026-08-02 02:47:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:13.946925600Z
+2026-08-02 02:47:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:14.957719400Z
+2026-08-02 02:47:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:15.970317700Z
+2026-08-02 02:47:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:16.980751400Z
+2026-08-02 02:47:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:17.990418400Z
+2026-08-02 02:47:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:19.004645800Z
+2026-08-02 02:47:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:20.017301700Z
+2026-08-02 02:47:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:21.020422900Z
+2026-08-02 02:47:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:22.030933700Z
+2026-08-02 02:47:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-02 02:47:22 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-02 02:47:22 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-02 02:47:22 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:47:22 INFO  c.n.repository.TransactionRepository - Executing 'findAllAccounts' method in TransactionRepository
+2026-08-02 02:47:22 INFO  c.n.repository.TransactionRepository - Executing 'findByAccountId' method in TransactionRepository
+2026-08-02 02:47:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:23.041034600Z
+2026-08-02 02:47:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:24.052404900Z
+2026-08-02 02:47:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:25.063102Z
+2026-08-02 02:47:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:26.077658800Z
+2026-08-02 02:47:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:27.086072800Z
+2026-08-02 02:47:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:28.091494600Z
+2026-08-02 02:47:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:29.106016900Z
+2026-08-02 02:47:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:30.118031600Z
+2026-08-02 02:47:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:31.119975800Z
+2026-08-02 02:47:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:32.121617100Z
+2026-08-02 02:47:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:33.134217100Z
+2026-08-02 02:47:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:34.144931600Z
+2026-08-02 02:47:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:35.156684200Z
+2026-08-02 02:47:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:36.169011400Z
+2026-08-02 02:47:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:37.176752900Z
+2026-08-02 02:47:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:38.188104500Z
+2026-08-02 02:47:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:39.203309600Z
+2026-08-02 02:47:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:40.218387100Z
+2026-08-02 02:47:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:41.227627800Z
+2026-08-02 02:47:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:42.240597200Z
+2026-08-02 02:47:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:43.256103600Z
+2026-08-02 02:47:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:44.262742500Z
+2026-08-02 02:47:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:45.272897200Z
+2026-08-02 02:47:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:46.288699Z
+2026-08-02 02:47:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:47.301364800Z
+2026-08-02 02:47:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:48.314316300Z
+2026-08-02 02:47:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:49.329358500Z
+2026-08-02 02:47:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:50.339039300Z
+2026-08-02 02:47:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:51.347530500Z
+2026-08-02 02:47:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:52.357061400Z
+2026-08-02 02:47:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:53.359941900Z
+2026-08-02 02:47:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:54.367057400Z
+2026-08-02 02:47:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:55.377379500Z
+2026-08-02 02:47:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:56.391627300Z
+2026-08-02 02:47:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:57.404894700Z
+2026-08-02 02:47:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:58.415758800Z
+2026-08-02 02:47:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:47:59.428614200Z
+2026-08-02 02:48:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:00.437114500Z
+2026-08-02 02:48:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:01.449118Z
+2026-08-02 02:48:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:02.460342800Z
+2026-08-02 02:48:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:03.471100800Z
+2026-08-02 02:48:04 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:04.480894400Z
+2026-08-02 02:48:05 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:05.495302700Z
+2026-08-02 02:48:06 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:06.505637Z
+2026-08-02 02:48:07 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:07.520681300Z
+2026-08-02 02:48:08 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:08.535639400Z
+2026-08-02 02:48:09 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:09.545334600Z
+2026-08-02 02:48:10 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:10.559250900Z
+2026-08-02 02:48:11 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:11.566482400Z
+2026-08-02 02:48:12 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:12.568205900Z
+2026-08-02 02:48:13 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:13.577112Z
+2026-08-02 02:48:14 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:14.590863Z
+2026-08-02 02:48:15 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:15.602299600Z
+2026-08-02 02:48:16 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:16.612620800Z
+2026-08-02 02:48:17 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:17.615631800Z
+2026-08-02 02:48:18 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:18.628848600Z
+2026-08-02 02:48:19 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:19.633331800Z
+2026-08-02 02:48:20 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:20.636343300Z
+2026-08-02 02:48:21 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:21.638802Z
+2026-08-02 02:48:22 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:22.645802500Z
+2026-08-02 02:48:23 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:23.655824200Z
+2026-08-02 02:48:24 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:24.661845800Z
+2026-08-02 02:48:25 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:25.675438200Z
+2026-08-02 02:48:26 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:26.684678500Z
+2026-08-02 02:48:27 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:27.691337900Z
+2026-08-02 02:48:28 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:28.700610500Z
+2026-08-02 02:48:29 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:29.711030Z
+2026-08-02 02:48:30 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:30.718867300Z
+2026-08-02 02:48:31 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:31.732132200Z
+2026-08-02 02:48:32 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:32.742491900Z
+2026-08-02 02:48:33 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:33.749909100Z
+2026-08-02 02:48:34 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:34.764854400Z
+2026-08-02 02:48:35 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:35.773775200Z
+2026-08-02 02:48:36 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:36.785796800Z
+2026-08-02 02:48:37 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:37.801079300Z
+2026-08-02 02:48:38 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:38.811916300Z
+2026-08-02 02:48:39 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:39.821956900Z
+2026-08-02 02:48:40 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:40.836291200Z
+2026-08-02 02:48:41 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:41.844227Z
+2026-08-02 02:48:42 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:42.853403600Z
+2026-08-02 02:48:43 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:43.862777Z
+2026-08-02 02:48:44 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:44.872080300Z
+2026-08-02 02:48:45 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:45.879629500Z
+2026-08-02 02:48:46 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:46.886609Z
+2026-08-02 02:48:47 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:47.898486500Z
+2026-08-02 02:48:48 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:48.900634400Z
+2026-08-02 02:48:49 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:49.906993100Z
+2026-08-02 02:48:50 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:50.916747700Z
+2026-08-02 02:48:51 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:51.924416200Z
+2026-08-02 02:48:52 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:52.937566100Z
+2026-08-02 02:48:53 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:53.946939600Z
+2026-08-02 02:48:54 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:54.955152300Z
+2026-08-02 02:48:55 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:55.970404500Z
+2026-08-02 02:48:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:56.978186800Z
+2026-08-02 02:48:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:57.987219500Z
+2026-08-02 02:48:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:48:58.993537700Z
+2026-08-02 02:49:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:49:00.002526300Z
+2026-08-02 02:49:00 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02 02:49:00 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-02 02:56:54 INFO  c.neo.TransactionViewerApplication - Starting TransactionViewerApplication using Java 21.0.10 with PID 13388 (C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend)
+2026-08-02 02:56:54 INFO  c.neo.TransactionViewerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-02 02:56:55 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-02 02:56:55 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-02 02:56:55 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:56:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-02 02:56:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-02 02:56:56 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1183 ms
+2026-08-02 02:56:56 INFO  c.n.s.TransactionPersistenceService - Initializing transaction persistence service
+2026-08-02 02:56:56 INFO  c.n.s.TransactionPersistenceService - Start Loading transactions from files
+2026-08-02 02:56:56 INFO  c.n.repository.TransactionRepository - Executing 'load' method in TransactionRepository
+2026-08-02 02:56:56 INFO  c.n.repository.TransactionRepository - 2503 transactions loaded
+2026-08-02 02:56:56 INFO  c.n.s.TransactionPersistenceService - Finished Loading transactions from files
+2026-08-02 02:56:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-02 02:56:56 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-02 02:56:56 INFO  c.neo.TransactionViewerApplication - Started TransactionViewerApplication in 2.788 seconds (process running for 3.256)
+2026-08-02 02:56:56 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:56:56.804908100Z
+2026-08-02 02:56:57 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:56:57.811910300Z
+2026-08-02 02:56:58 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:56:58.822898Z
+2026-08-02 02:56:59 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:56:59.837495Z
+2026-08-02 02:57:00 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:57:00.851867500Z
+2026-08-02 02:57:01 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:57:01.861936300Z
+2026-08-02 02:57:02 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:57:02.868108400Z
+2026-08-02 02:57:03 INFO  c.n.s.TransactionPersistenceService - Starting transaction flush at 2026-08-02T08:57:03.881769400Z
+2026-08-02 02:57:04 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02 02:57:04 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete

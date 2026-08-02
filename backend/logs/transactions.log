@@ -1,0 +1,2 @@
+2026-08-02 02:28:42 INFO  - REVERSE_TRANSACTION id=txn-000946 accountId=acc-023 oldStatus=POSTED newStatus=REVERSED
+2026-08-02 02:28:59 INFO  - CREATE_TRANSACTION id=txn-f3ec81ab-2ce4-445b-81ea-710482f64cb6 accountId=acc-023 merchant=SpaceX amount=1000 status=PENDING
