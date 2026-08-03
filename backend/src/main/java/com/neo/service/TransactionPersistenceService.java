@@ -60,15 +60,6 @@ public class TransactionPersistenceService {
             );
             throw new IllegalStateException("illegal URI format for the file specified", e);
         }
-        /*catch (FileSystemNotFoundException e) {
-            throw new FileSystemNotFoundException("Cannot resolve external data file");
-        }*/
-        catch (SecurityException e) {
-            log.error(
-                    "Cannot access the external file, invalid authorization to the file"
-            );
-            throw new SecurityException("unauthorized access to the file specified",e);
-        }
     }
 
     @PostConstruct
@@ -120,6 +111,9 @@ public class TransactionPersistenceService {
                 "Starting transaction flush at {}", Instant.now()
         );
         if (writeQueue.isEmpty()) {
+            log.info(
+                    "No transactions to flush at {}", Instant.now()
+            );
             return;
         }
 
@@ -127,22 +121,30 @@ public class TransactionPersistenceService {
         writeQueue.drainTo(batch);
 
         List<Transaction> snapshot = repository.findAllTransactions();
+        Path temp = null;
         try {
-
-            Path temp = Files.createTempFile(externalFile.getParent(), "transactions", ".tmp");
+            temp = Files.createTempFile(externalFile.getParent(), "transactions", ".tmp");
 
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(temp.toFile(), snapshot);
 
             Files.move(temp, externalFile, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
 
-            log.info(
-                    "Transaction persistence completed batchSize={}",
-                    snapshot.size()
-            );
-        }
-        catch (IOException e) {
+            log.info("Transaction persistence completed batchSize={}", snapshot.size());
+        } catch (IOException e) {
             batch.forEach(writeQueue::offer);
             log.error("Failed persisting transactions to external file", e);
+            deleteQuietly(temp);
+        }
+    }
+
+    private void deleteQuietly(Path path) {
+        if (path == null) {
+            return;
+        }
+        try {
+            Files.deleteIfExists(path);
+        } catch (IOException e) {
+            log.warn("Failed to clean up temporary file {}", path, e);
         }
     }
 }

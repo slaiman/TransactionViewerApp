@@ -14,8 +14,8 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
 @Service
@@ -24,6 +24,22 @@ public class TransactionService {
 
     private final TransactionRepository transactionRepository;
     private final TransactionPersistenceService transactionPersistenceService;
+
+    /**
+     * Per-transaction-id locks guarding the reverse operation's check-then-act
+     * sequence (read status, verify it's POSTED, then set it to REVERSED).
+     * computeIfAbsent atomically gets-or-creates the lock object for a given
+     * id, and different ids get independent lock objects — so reversing
+     * txn-A and txn-B concurrently is still fully parallel. Only concurrent
+     * attempts to reverse the *same* id are forced to serialize.
+     *
+     * This map's size is bounded by the number of distinct transaction ids
+     * that have ever had a reversal attempted, which itself can't exceed the
+     * total number of transactions in the system — so it does not grow
+     * without bound over the app's lifetime.
+     */
+    private final ConcurrentHashMap<String, Object> reversalLocks = new ConcurrentHashMap<>();
+
     private static final Logger auditLogger = LoggerFactory.getLogger("TRANSACTION_LOGGER");
 
     public TransactionService(TransactionRepository transactionRepository, TransactionPersistenceService transactionPersistenceService) {
@@ -121,35 +137,39 @@ public class TransactionService {
                 transactionId
         );
 
-        Transaction transaction = transactionRepository.findById(transactionId)
-                .orElseThrow(() -> new TransactionNotFoundException(transactionId));
+        Object lock = reversalLocks.computeIfAbsent(transactionId, id -> new Object());
 
-        TransactionStatus oldStatus =
-                transaction.getStatus();
+        synchronized (lock) {
+            Transaction transaction = transactionRepository.findById(transactionId)
+                    .orElseThrow(() -> new TransactionNotFoundException(transactionId));
 
-        if (transaction.getStatus() != TransactionStatus.POSTED) {
+            TransactionStatus oldStatus = transaction.getStatus();
 
-            log.warn(
-                    "Cannot reverse transaction id={} currentStatus={}",
-                    transactionId,
-                    oldStatus
+            if (oldStatus != TransactionStatus.POSTED) {
+
+                log.warn(
+                        "Cannot reverse transaction id={} currentStatus={}",
+                        transactionId,
+                        oldStatus
+                );
+
+                throw new InvalidTransactionStateException(
+                        "Only transactions with status POSTED can be reversed. Current status: "
+                                + oldStatus);
+            }
+
+            transaction.setStatus(TransactionStatus.REVERSED);
+            transactionPersistenceService.persist(transaction);
+
+            auditLogger.info(
+                    "REVERSE_TRANSACTION id={} accountId={} oldStatus={} newStatus={}",
+                    transaction.getId(),
+                    transaction.getAccountId(),
+                    oldStatus,
+                    transaction.getStatus()
             );
 
-            throw new InvalidTransactionStateException(
-                    "Only transactions with status POSTED can be reversed. Current status: "
-                            + transaction.getStatus());
+            return transaction;
         }
-        transaction.setStatus(TransactionStatus.REVERSED);
-        transactionPersistenceService.persist(transaction);
-
-        auditLogger.info(
-                "REVERSE_TRANSACTION id={} accountId={} oldStatus={} newStatus={}",
-                transaction.getId(),
-                transaction.getAccountId(),
-                oldStatus,
-                transaction.getStatus()
-        );
-
-        return transaction;
     }
 }

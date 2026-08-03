@@ -1,6 +1,5 @@
 package com.neo.repository;
 
-import com.neo.exception.TransactionNotFoundException;
 import com.neo.model.Transaction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -30,22 +29,8 @@ public class TransactionRepository {
 
         //loop over all transactions
         for (Transaction transaction : loadedTransactions) {
-
-            //insert transactions into memory
-            transactions.put(
-                    transaction.getId(),
-                    transaction
-            );
-
-            //insert account ID and its transaction IDs into memory
-            accountTransactions
-                    .computeIfAbsent(
-                            transaction.getAccountId(),
-                            key -> ConcurrentHashMap.newKeySet()
-                    )
-                    .add(transaction.getId());
+            indexTransaction(transaction);
         }
-
         log.info("{} transactions loaded", loadedTransactions.size());
     }
 
@@ -53,7 +38,7 @@ public class TransactionRepository {
         log.info(
                 "Executing 'findAllAccounts' method in TransactionRepository"
         );
-        return accountTransactions.keySet().stream().toList();
+        return accountTransactions.keySet().stream().sorted().toList();
     }
 
     public List<Transaction> findAllTransactions(){
@@ -94,8 +79,18 @@ public class TransactionRepository {
                 "Executing 'save' method in TransactionRepository"
         );
 
-        // Update memory immediately
-        transactions.put(transaction.getId(), transaction);
+        indexTransaction(transaction);
+
+        return transaction;
+    }
+
+    private void indexTransaction(Transaction transaction){
+
+        //insert transactions into memory
+        transactions.put(
+                transaction.getId(),
+                transaction
+        );
 
         // Update account transaction hashmap by the account id and the transaction ids
         accountTransactions
@@ -104,6 +99,5 @@ public class TransactionRepository {
                         key -> ConcurrentHashMap.newKeySet()
                 )
                 .add(transaction.getId());
-        return transaction;
     }
 }
