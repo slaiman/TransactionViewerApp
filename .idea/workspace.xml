@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/logs/application.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/logs/transactions.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/transactions.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,7 @@
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\scripts" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Diffblue Cover.Write tests for package ">
     <configuration name="TransactionViewerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.neo.TransactionViewerApplication" />
       <module name="backend" />
@@ -107,8 +100,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Write tests for package " type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="TransactionViewerApp" />
+      <settings run-config-name="Write tests for package " include-system-env-vars="true" skeleton-tests-only="false">
+        <jvm-args />
+        <selection-scope>package</selection-scope>
+        <selected-element key="" />
+      </settings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Diffblue Cover.Write tests for package " />
         <item itemvalue="Application.TransactionViewerApplication" />
       </list>
     </recent_temporary>
@@ -122,6 +125,15 @@
       <option name="presentableId" value="Default" />
       <updated>1785521534126</updated>
     </task>
+    <task id="LOCAL-00001" summary="Version 1.2">
+      <option name="closed" value="true" />
+      <created>1785705697629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785705697629</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.2" />
   </component>
 </project>

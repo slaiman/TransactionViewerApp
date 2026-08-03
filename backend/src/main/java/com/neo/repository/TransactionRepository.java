@@ -1,5 +1,6 @@
 package com.neo.repository;
 
+import com.neo.exception.TransactionNotFoundException;
 import com.neo.model.Transaction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -103,38 +104,6 @@ public class TransactionRepository {
                         key -> ConcurrentHashMap.newKeySet()
                 )
                 .add(transaction.getId());
-        return transaction;
-    }
-
-    public Transaction update(Transaction transaction) {
-
-        log.info(
-                "Executing 'update' method in TransactionRepository"
-        );
-
-        Transaction old =
-                transactions.put(transaction.getId(), transaction);
-
-        // In case accountId changes
-        if (old != null && !old.getAccountId().equals(transaction.getAccountId())) {
-
-            Set<String> oldAccountTransactions = accountTransactions.get(old.getAccountId());
-
-            if (oldAccountTransactions != null && !oldAccountTransactions.isEmpty()) {
-                oldAccountTransactions.remove(transaction.getId());
-
-                if (oldAccountTransactions.isEmpty()) {
-                    accountTransactions.remove(old.getAccountId(), oldAccountTransactions);
-                }
-            }
-
-            accountTransactions
-                    .computeIfAbsent(
-                            transaction.getAccountId(),
-                            key -> ConcurrentHashMap.newKeySet()
-                    )
-                    .add(transaction.getId());
-        }
         return transaction;
     }
 }
