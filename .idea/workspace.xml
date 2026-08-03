@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/dto/CreateTransactionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/dto/CreateTransactionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionPersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionPersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" afterDir="false" />
-    </list>
+    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785738169254</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 1.4">
+      <option name="closed" value="true" />
+      <created>1785742194630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785742194630</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 1.2" />
     <MESSAGE value="Version 1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.3" />
+    <MESSAGE value="Version 1.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.4" />
   </component>
 </project>

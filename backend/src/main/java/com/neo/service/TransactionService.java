@@ -59,7 +59,7 @@ public class TransactionService {
      */
     public List<Transaction> getTransactions(String accountId, TransactionStatus statusFilter) {
 
-        log.debug(
+        log.info(
                 "Retrieving transactions accountId={} statusFilter={}",
                 accountId,
                 statusFilter
@@ -81,7 +81,7 @@ public class TransactionService {
                 )
                 .toList();
 
-        log.debug(
+        log.info(
                 "Retrieved {} transactions for accountId={}",
                 result.size(),
                 accountId
@@ -147,7 +147,7 @@ public class TransactionService {
 
             if (oldStatus != TransactionStatus.POSTED) {
 
-                log.warn(
+                log.info(
                         "Cannot reverse transaction id={} currentStatus={}",
                         transactionId,
                         oldStatus
