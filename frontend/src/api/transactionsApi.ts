@@ -2,8 +2,10 @@ import type {
   CreateTransactionRequest,
   Transaction,
   TransactionStatus,
+  TransactionFilterParams,
 } from "../types/transaction";
 import { handleResponse } from "./httpClient";
+import axios from 'axios';
 
 const BASE_URL = "/api/transactions";
 
@@ -12,16 +14,16 @@ export async function fetchAccountIds(): Promise<string[]> {
   return handleResponse<string[]>(response);
 }
 
-export async function fetchTransactions(
-  accountId: string,
-  status?: TransactionStatus,
-): Promise<Transaction[]> {
-  const params = new URLSearchParams({ accountId });
-  if (status) params.set("status", status);
 
-  const response = await fetch(`${BASE_URL}?${params.toString()}`);
-  return handleResponse<Transaction[]>(response);
-}
+export async function fetchFilteredTransactions(
+  filter: TransactionFilterParams
+): Promise<Transaction[]> {
+  const response = await axios.get<Transaction[]>(
+      `${BASE_URL}/filtered`,
+      { params: filter } // Axios converts this into ?accountId=...&status=...&sortBy=...
+      );
+  return response.data;
+};
 
 export async function createTransaction(
   request: CreateTransactionRequest,

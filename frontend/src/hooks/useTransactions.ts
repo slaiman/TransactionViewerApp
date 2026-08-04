@@ -1,67 +1,44 @@
-import { useCallback, useEffect, useState } from "react";
-import {
-  createTransaction as apiCreateTransaction,
-  fetchTransactions,
-  reverseTransaction as apiReverseTransaction,
-} from "../api/transactionsApi";
-import type {
-  CreateTransactionRequest,
-  Transaction,
-  TransactionStatus,
-} from "../types/transaction";
+import { useState, useEffect, useCallback } from 'react';
+import type { Transaction, TransactionFilterParams } from '../types/transaction';
+import { fetchFilteredTransactions } from '../api/transactionsApi';
 
-export function useTransactions(accountId: string, statusFilter?: TransactionStatus) {
+export const useTransactions = (accountId: string) => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [filter, setFilter] = useState<TransactionFilterParams>({
+    sortBy: 'DATE',
+    sortDirection: 'DESC',
+  });
 
-  const load = useCallback(async () => {
+  const loadTransactions = useCallback(async () => {
+    console.log("loadTransactions triggered with accountId:", accountId);
+
     if (!accountId) {
-      setTransactions([]);
-      setIsLoading(false);
+      console.warn("loadTransactions skipped: accountId is missing!");
+      setLoading(false);
       return;
     }
-    setIsLoading(true);
-    setError(null);
+
     try {
-      const data = await fetchTransactions(accountId, statusFilter);
+      setLoading(true);
+      setError(null);
+      console.log("Executing fetch with filter:", { ...filter, accountId });
+
+      const data = await fetchFilteredTransactions({ ...filter, accountId });
+      console.log("Fetched data successfully:", data);
       setTransactions(data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load transactions");
+    } catch (err: any) {
+      console.error("Error fetching transactions:", err);
+      setError(err.message || 'Failed to fetch transactions');
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
-  }, [accountId, statusFilter]);
+  }, [accountId, filter]);
 
   useEffect(() => {
-    load();
-  }, [load]);
+    loadTransactions();
+  }, [loadTransactions]);
 
-  const reverse = useCallback(
-    async (id: string) => {
-      setError(null);
-      try {
-        await apiReverseTransaction(id);
-        await load();
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to reverse transaction");
-      }
-    },
-    [load],
-  );
-
-  const create = useCallback(
-    async (request: CreateTransactionRequest) => {
-      setError(null);
-      try {
-        await apiCreateTransaction(request);
-        await load();
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to create transaction");
-      }
-    },
-    [load],
-  );
-
-  return { transactions, isLoading, error, reverse, create, refresh: load };
-}
+  return { transactions, loading, error, filter, setFilter, refetch: loadTransactions };
+};

@@ -4,41 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.6">
+    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.7 (adding DashBoard to the frontend)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.oxlintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.oxlintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/api/transactionsApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/transactionsApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccountSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccountSwitcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NewTransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NewTransactionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/StatusBadge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StatusBadge.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/StatusFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StatusFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TransactionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TransactionList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TransactionRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TransactionRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/__tests__/StatusFilter.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/__tests__/StatusFilter.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/__tests__/TransactionList.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/__tests__/TransactionList.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/__tests__/TransactionRow.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/__tests__/TransactionRow.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useAccounts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useAccounts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useTransactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useTransactions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/test/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/test/setup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TransactionsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/TransactionsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/types/transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/transaction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.node.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.TransactionViewerApplication.executor": "Debug",
+    "Application.TransactionViewerApplication.executor": "Run",
     "JUnit.TransactionRepositoryTest.executor": "Run",
     "JUnit.TransactionServiceTest.executor": "Run",
     "Maven.TransactionViewerApp [clean].executor": "Run",
@@ -118,7 +90,7 @@
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TransactionRepositoryTest">
+  <component name="RunManager" selected="Application.TransactionViewerApplication">
     <configuration name="TransactionViewerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.neo.TransactionViewerApplication" />
       <module name="backend" />
@@ -173,10 +145,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TransactionViewerApplication" />
         <item itemvalue="JUnit.TransactionRepositoryTest" />
         <item itemvalue="JUnit.TransactionServiceTest" />
         <item itemvalue="Diffblue Cover.Write tests for package " />
-        <item itemvalue="Application.TransactionViewerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785775944623</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version 1.7 (adding DashBoard to the frontend)">
+      <option name="closed" value="true" />
+      <created>1785828738145</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785828738145</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +229,7 @@
     <MESSAGE value="Version 1.4" />
     <MESSAGE value="Version 1.5" />
     <MESSAGE value="Version 1.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.6" />
+    <MESSAGE value="Version 1.7 (adding DashBoard to the frontend)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.7 (adding DashBoard to the frontend)" />
   </component>
 </project>

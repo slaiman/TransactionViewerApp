@@ -1,5 +1,20 @@
 export type TransactionStatus = "POSTED" | "PENDING" | "REVERSED";
 
+export type SortBy = 'DATE' | 'AMOUNT';
+export type SortDirection = 'ASC' | 'DESC';
+
+export interface TransactionFilterParams {
+  accountId?: string;
+  status?: TransactionStatus;
+  dateFrom?: string;      // YYYY-MM-DD
+  dateTo?: string;        // YYYY-MM-DD
+  amountMin?: number;
+  amountMax?: number;
+  merchant?: string;
+  sortBy?: SortBy;
+  sortDirection?: SortDirection;
+}
+
 export interface Transaction {
   id: string;
   accountId: string;

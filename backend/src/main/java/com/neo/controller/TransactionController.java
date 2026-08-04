@@ -55,7 +55,7 @@ public class TransactionController {
      */
     @GetMapping("/filtered")
     public ResponseEntity<List<Transaction>> getFilteredTransactions(
-            @RequestParam String accountId,
+            @RequestParam(required = false) String accountId,
             @RequestParam(required = false) TransactionStatus status,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateFrom,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateTo,
