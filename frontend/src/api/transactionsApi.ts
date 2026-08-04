@@ -1,27 +1,11 @@
 import type {
-  ApiError,
   CreateTransactionRequest,
   Transaction,
   TransactionStatus,
 } from "../types/transaction";
+import { handleResponse } from "./httpClient";
 
 const BASE_URL = "/api/transactions";
-
-async function handleResponse<T>(response: Response): Promise<T> {
-  if (!response.ok) {
-    let message = `Request failed with status ${response.status}`;
-    try {
-      const body: ApiError = await response.json();
-      message = body.message ?? message;
-    } catch {
-      // response body wasn't JSON (or was empty) — fall back to the generic message
-    }
-    throw new Error(message);
-  }
-  // 204 No Content etc. would have no body to parse
-  const text = await response.text();
-  return text ? (JSON.parse(text) as T) : (undefined as T);
-}
 
 export async function fetchAccountIds(): Promise<string[]> {
   const response = await fetch(`${BASE_URL}/accounts`);

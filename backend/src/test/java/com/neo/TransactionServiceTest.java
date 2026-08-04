@@ -1,6 +1,7 @@
 package com.neo;
 
 import com.neo.dto.CreateTransactionRequest;
+import com.neo.dto.TransactionFilter;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
 import com.neo.model.Transaction;
@@ -82,7 +83,7 @@ class TransactionServiceTest {
         Transaction pending = transaction("txn-2", "acc-001", TransactionStatus.PENDING, LocalDate.now());
         when(transactionRepositoryMock.findByAccountId("acc-001")).thenReturn(List.of(posted, pending));
 
-        List<Transaction> result = service.getTransactions("acc-001", TransactionStatus.POSTED);
+        List<Transaction> result = service.getTransactions("acc-001", TransactionFilter.builder().status(TransactionStatus.POSTED).build());
 
         assertThat(result).containsExactly(posted);
     }

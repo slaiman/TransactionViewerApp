@@ -23,3 +23,12 @@ export interface ApiError {
   message: string;
   path: string;
 }
+
+export interface DashboardStats {
+  totalTransactions: number;
+  postedTransactions: number;
+  pendingTransactions: number;
+  reversedTransactions: number;
+  totalAccounts: number;
+  totalAmount: number;
+}

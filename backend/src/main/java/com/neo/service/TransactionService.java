@@ -1,6 +1,8 @@
 package com.neo.service;
 
 import com.neo.dto.CreateTransactionRequest;
+import com.neo.dto.SortDirection;
+import com.neo.dto.TransactionFilter;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
 import com.neo.model.Transaction;
@@ -57,12 +59,12 @@ public class TransactionService {
     /**
      * Retrieve all transactions for a given account, optionally filtered by status and sorted by date of transaction.
      */
-    public List<Transaction> getTransactions(String accountId, TransactionStatus statusFilter) {
+    public List<Transaction> getTransactions(String accountId, TransactionFilter transactionFilter) {
 
         log.info(
-                "Retrieving transactions accountId={} statusFilter={}",
+                "Retrieving transactions accountId={} transactionFilter={}",
                 accountId,
-                statusFilter
+                transactionFilter
         );
 
         Stream<Transaction> stream =
@@ -70,16 +72,48 @@ public class TransactionService {
                         .findByAccountId(accountId)
                         .stream();
 
-        if (statusFilter != null) {
-            stream = stream.filter(t -> t.getStatus() == statusFilter);
-        }
+        List<Transaction> result = null;
 
-        List<Transaction> result = stream
-                .sorted(
-                        Comparator.comparing(Transaction::getDate)
-                                .reversed()
-                )
-                .toList();
+        if (transactionFilter != null) {
+
+            // Define base comparator based on sortBy field
+            Comparator<Transaction> comparator = switch (transactionFilter.sortBy()) {
+                case AMOUNT -> Comparator.comparing(Transaction::getAmount);
+                case DATE -> Comparator.comparing(Transaction::getDate);
+            };
+
+            // Reverse if requested
+            if (transactionFilter.sortDirection() == SortDirection.DESC) {
+                comparator = comparator.reversed();
+            }
+
+            stream = stream.filter(t ->
+                            // Status filter (ignore if null)
+                            (transactionFilter.status() == null || t.getStatus() == transactionFilter.status())
+
+                            // Merchant filter (ignore if null/blank, case-insensitive partial match)
+                            && (transactionFilter.merchant() == null || transactionFilter.merchant().isBlank()
+                            || (t.getMerchantName() != null && t.getMerchantName().toLowerCase().contains(transactionFilter.merchant().toLowerCase())))
+
+                            // Date From filter (ignore if null) -> t.getDate() >= dateFrom
+                            && (transactionFilter.dateFrom() == null || !t.getDate().isBefore(transactionFilter.dateFrom()))
+
+                            // Date To filter (ignore if null) -> t.getDate() <= dateTo
+                            && (transactionFilter.dateTo() == null || !t.getDate().isAfter(transactionFilter.dateTo()))
+
+                            // Amount Min filter (ignore if null) -> t.getAmount() >= amountMin
+                            && (transactionFilter.amountMin() == null || t.getAmount().compareTo(transactionFilter.amountMin()) >= 0)
+
+                            // Amount Max filter (ignore if null) -> t.getAmount() <= amountMax
+                            && (transactionFilter.amountMax() == null || t.getAmount().compareTo(transactionFilter.amountMax()) <= 0)
+            );
+            // Apply sorting and collect
+            result = stream
+                    .sorted(comparator)
+                    .toList();
+        }
+        else result = stream.toList();
+
 
         log.info(
                 "Retrieved {} transactions for accountId={}",
