@@ -5,6 +5,7 @@ import com.neo.dto.SortDirection;
 import com.neo.dto.TransactionFilter;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
+import com.neo.model.AccountType;
 import com.neo.model.Transaction;
 import com.neo.model.TransactionStatus;
 import com.neo.repository.TransactionRepository;
@@ -67,10 +68,10 @@ public class TransactionService {
                 transactionFilter
         );
 
-        Stream<Transaction> stream =
-                transactionRepository
-                        .findByAccountId(accountId)
-                        .stream();
+        //check if All Accounts is selected, then return all transactions for all accounts
+        Stream<Transaction> stream = accountId.equals(AccountType.ALL_ACCOUNTS.getDisplayName()) ?
+                transactionRepository.findAllTransactions().stream():
+                transactionRepository.findByAccountId(accountId).stream();
 
         List<Transaction> result = null;
 

@@ -3,6 +3,11 @@ export type TransactionStatus = "POSTED" | "PENDING" | "REVERSED";
 export type SortBy = 'DATE' | 'AMOUNT';
 export type SortDirection = 'ASC' | 'DESC';
 
+// Account type Enum
+export enum AccountFilterOption {
+  ALL = 'ALL Accounts',
+}
+
 export interface TransactionFilterParams {
   accountId?: string;
   status?: TransactionStatus;

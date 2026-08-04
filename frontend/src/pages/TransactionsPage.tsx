@@ -3,6 +3,7 @@ import { useTransactions } from '../hooks/useTransactions';
 import { useAccounts } from '../hooks/useAccounts';
 import type { SortBy, SortDirection, TransactionStatus } from '../types/transaction';
 import { TransactionList } from '../components/TransactionList';
+import { AccountFilterOption } from '../types/transaction';
 
 export const TransactionsPage: React.FC = () => {
   // 1. Destructure using YOUR hook's exact property names: accountIds, isLoading
@@ -59,7 +60,8 @@ export const TransactionsPage: React.FC = () => {
             value={selectedAccountId}
             onChange={(e) => setSelectedAccountId(e.target.value)}
             className="border border-gray-300 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
+          > {/* Sending value="" triggers "All Accounts" in the cleaned params */}
+                <option value={AccountFilterOption.ALL}>All Accounts</option>
             {accountIds.map((accId: string) => (
               <option key={accId} value={accId}>
                 Account #{accId}
