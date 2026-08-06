@@ -1,6 +1,7 @@
 package com.neo;
 
 import com.neo.dto.CreateTransactionRequest;
+import com.neo.dto.PageResponse;
 import com.neo.dto.TransactionFilter;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
@@ -72,9 +73,9 @@ class TransactionServiceTest {
         Transaction newer = transaction("txn-2", "acc-001", TransactionStatus.POSTED, LocalDate.of(2026, 6, 1));
         when(transactionRepositoryMock.findByAccountId("acc-001")).thenReturn(List.of(older, newer));
 
-        List<Transaction> result = service.getTransactions("acc-001", null);
+        PageResponse<Transaction> result = service.getTransactions("acc-001", null, null);
 
-        assertThat(result).extracting(Transaction::getId).containsExactly("txn-2", "txn-1");
+        assertThat(result.content()).extracting(Transaction::getId).containsExactly("txn-2", "txn-1");
     }
 
     @Test
@@ -83,9 +84,9 @@ class TransactionServiceTest {
         Transaction pending = transaction("txn-2", "acc-001", TransactionStatus.PENDING, LocalDate.now());
         when(transactionRepositoryMock.findByAccountId("acc-001")).thenReturn(List.of(posted, pending));
 
-        List<Transaction> result = service.getTransactions("acc-001", TransactionFilter.builder().status(TransactionStatus.POSTED).build());
+        PageResponse<Transaction> result = service.getTransactions("acc-001", TransactionFilter.builder().status(TransactionStatus.POSTED).build(), null);
 
-        assertThat(result).containsExactly(posted);
+        assertThat(result.content()).containsExactly(posted);
     }
 
     // ---- createTransaction ------------------------------------------------

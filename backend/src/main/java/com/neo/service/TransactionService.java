@@ -1,8 +1,6 @@
 package com.neo.service;
 
-import com.neo.dto.CreateTransactionRequest;
-import com.neo.dto.SortDirection;
-import com.neo.dto.TransactionFilter;
+import com.neo.dto.*;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
 import com.neo.model.AccountType;
@@ -60,12 +58,13 @@ public class TransactionService {
     /**
      * Retrieve all transactions for a given account, optionally filtered by status and sorted by date of transaction.
      */
-    public List<Transaction> getTransactions(String accountId, TransactionFilter transactionFilter) {
+    public PageResponse<Transaction> getTransactions(String accountId, TransactionFilter transactionFilter, PaginationRequest request) {
 
-        log.info(
-                "Retrieving transactions accountId={} transactionFilter={}",
+        log.debug(
+                "Retrieving transactions accountId={} filter={} pagination={}",
                 accountId,
-                transactionFilter
+                transactionFilter,
+                request
         );
 
         //check if All Accounts is selected, then return all transactions for all accounts
@@ -122,7 +121,34 @@ public class TransactionService {
                 accountId
         );
 
-        return result;
+        return paginate(result,request);
+    }
+
+    /**
+     * Slices an already-filtered-and-sorted list into one page. fromIndex is
+     * clamped to the list's size, so an out-of-range page (e.g. requesting
+     * page 50 of a 3-page result) safely yields an empty page rather than an
+     * IndexOutOfBoundsException.
+     */
+    private PageResponse<Transaction> paginate(List<Transaction> items, PaginationRequest pagination) {
+
+        long totalElements = items.size();
+        int totalPages = (int) Math.ceil((double) totalElements / pagination.size());
+
+        int fromIndex = Math.min(pagination.page() * pagination.size(), items.size());
+        int toIndex = Math.min(fromIndex + pagination.size(), items.size());
+
+        List<Transaction> content = items.subList(fromIndex, toIndex);
+
+        return PageResponse.<Transaction>builder()
+                .content(content)
+                .page(pagination.page())
+                .size(pagination.size())
+                .totalElements(totalElements)
+                .totalPages(totalPages)
+                .first(pagination.page() == 0)
+                .last(pagination.page() >= totalPages - 1)
+                .build();
     }
 
     /**

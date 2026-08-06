@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.9 (adding All Accounts option to the frontend)" />
+    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.9.1 (adding All Accounts option to the frontend)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,37 +51,37 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TransactionViewerApplication.executor": "Run",
-    "JUnit.TransactionRepositoryTest.executor": "Run",
-    "JUnit.TransactionServiceTest.executor": "Run",
-    "Maven.TransactionViewerApp [clean].executor": "Run",
-    "Maven.TransactionViewerApp [compile].executor": "Run",
-    "Maven.TransactionViewerApp [install].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy].executor": "Run",
-    "Maven.TransactionViewerApp [org.apache.maven.plugins:maven-install-plugin:3.1.4:install].executor": "Run",
-    "Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor": "Run",
-    "Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:start].executor": "Run",
-    "Maven.TransactionViewerApp [package].executor": "Run",
-    "Maven.transaction-viewer-backend [clean].executor": "Run",
-    "Maven.transaction-viewer-backend [compile].executor": "Run",
-    "Maven.transaction-viewer-backend [install].executor": "Run",
-    "Maven.transaction-viewer-backend [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS/IdeaProjects/TransactionViewerApp/backend",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TransactionViewerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.apache.maven.plugins:maven-install-plugin:3.1.4:install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [org.springframework.boot:spring-boot-maven-plugin:4.1.0:start].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TransactionViewerApp [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.transaction-viewer-backend [org.springframework.boot:spring-boot-maven-plugin:4.1.0:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/IdeaProjects/TransactionViewerApp/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\backend" />
@@ -219,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785874045476</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Version 1.9.1 (adding All Accounts option to the frontend)">
+      <option name="closed" value="true" />
+      <created>1785874477248</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785874477248</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +257,7 @@
     <MESSAGE value="Version 1.7 (adding DashBoard to the frontend)" />
     <MESSAGE value="Version 1.8 (adding advanced filtering to the frontend)" />
     <MESSAGE value="Version 1.9 (adding All Accounts option to the frontend)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9 (adding All Accounts option to the frontend)" />
+    <MESSAGE value="Version 1.9.1 (adding All Accounts option to the frontend)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.1 (adding All Accounts option to the frontend)" />
   </component>
 </project>
