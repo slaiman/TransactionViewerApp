@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.9.2 (adding pagination feature)">
+    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.9.3 (adding pagination feature)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/transactionsApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/transactionsApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useTransactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useTransactions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TransactionsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/TransactionsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/transaction.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786002605650</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version 1.9.3 (adding pagination feature)">
+      <option name="closed" value="true" />
+      <created>1786002817968</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1786002817968</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +275,7 @@
     <MESSAGE value="Version 1.9 (adding All Accounts option to the frontend)" />
     <MESSAGE value="Version 1.9.1 (adding All Accounts option to the frontend)" />
     <MESSAGE value="Version 1.9.2 (adding pagination feature)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.2 (adding pagination feature)" />
+    <MESSAGE value="Version 1.9.3 (adding pagination feature)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.3 (adding pagination feature)" />
   </component>
 </project>

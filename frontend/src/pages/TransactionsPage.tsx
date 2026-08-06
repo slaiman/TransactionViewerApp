@@ -4,21 +4,37 @@ import { useAccounts } from '../hooks/useAccounts';
 import type { SortBy, SortDirection, TransactionStatus } from '../types/transaction';
 import { TransactionList } from '../components/TransactionList';
 import { AccountFilterOption } from '../types/transaction';
+import { Pagination } from '../components/Pagination';
 
 export const TransactionsPage: React.FC = () => {
-  // 1. Destructure using YOUR hook's exact property names: accountIds, isLoading
+  // 1. Fetch account IDs
   const { accountIds, isLoading: isLoadingAccounts, error: accountsError } = useAccounts();
   const [selectedAccountId, setSelectedAccountId] = useState<string>('');
 
   // 2. Default to the first account ID once loaded
   useEffect(() => {
     if (accountIds && accountIds.length > 0 && !selectedAccountId) {
-      setSelectedAccountId(accountIds[0]); // Sets to "acc-001" automatically
+      setSelectedAccountId(accountIds[0]);
     }
   }, [accountIds, selectedAccountId]);
 
-  // 3. Fetch transactions for the selected account ID
-  const { transactions, loading, error, filter, setFilter } = useTransactions(selectedAccountId);
+  // 3. Fetch transactions using the hook
+  const {
+    transactions,
+    pageInfo,
+    page,
+    setPage,
+    loading,
+    error,
+    filter,
+    setFilter
+  } = useTransactions(selectedAccountId);
+
+  // Sync selectedAccountId state changes with filter state
+  const handleAccountChange = (accId: string) => {
+    setSelectedAccountId(accId);
+    handleFilterChange('accountId', accId === AccountFilterOption.ALL ? undefined : accId);
+  };
 
   const handleFilterChange = (field: keyof typeof filter, value: any) => {
     setFilter((prev) => ({
@@ -29,7 +45,7 @@ export const TransactionsPage: React.FC = () => {
 
   const handleResetFilters = () => {
     setFilter({
-      accountId: selectedAccountId,
+      accountId: selectedAccountId === AccountFilterOption.ALL ? undefined : selectedAccountId,
       sortBy: 'DATE',
       sortDirection: 'DESC',
     });
@@ -58,10 +74,10 @@ export const TransactionsPage: React.FC = () => {
           <label className="text-sm font-medium text-gray-700">Account:</label>
           <select
             value={selectedAccountId}
-            onChange={(e) => setSelectedAccountId(e.target.value)}
+            onChange={(e) => handleAccountChange(e.target.value)}
             className="border border-gray-300 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          > {/* Sending value="" triggers "All Accounts" in the cleaned params */}
-                <option value={AccountFilterOption.ALL}>All Accounts</option>
+          >
+            <option value={AccountFilterOption.ALL}>All Accounts</option>
             {accountIds.map((accId: string) => (
               <option key={accId} value={accId}>
                 Account #{accId}
@@ -208,13 +224,26 @@ export const TransactionsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Render Table or List */}
+      {/* Render Table and Pagination Controls */}
       {loading ? (
         <div className="py-8 text-center text-gray-500">Loading transactions...</div>
       ) : error ? (
         <div className="p-4 bg-red-50 text-red-600 rounded-md border border-red-200">{error}</div>
       ) : (
-        <TransactionList transactions={transactions} />
+        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+          <TransactionList transactions={transactions} />
+
+          {/* Render Pagination Footer */}
+          {pageInfo && pageInfo.totalPages > 0 && (
+            <Pagination
+              pageNumber={page}
+              totalPages={pageInfo.totalPages}
+              totalElements={pageInfo.totalElements}
+              pageSize={pageInfo.pageSize}
+              onPageChange={(newPage) => setPage(newPage)}
+            />
+          )}
+        </div>
       )}
     </div>
   );

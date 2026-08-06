@@ -29,6 +29,23 @@ export interface Transaction {
   status: TransactionStatus;
 }
 
+export interface PaginationParams {
+  page: number;      // 0-indexed page number
+  size: number;      // items per page
+  sortBy?: string;
+  sortDirection?: 'ASC' | 'DESC';
+}
+
+export interface PageResponse<T> {
+  content: T[];
+  pageNumber: number;
+  pageSize: number;
+  totalElements: number;
+  totalPages: number;
+  last: boolean;
+  first: boolean;
+}
+
 export interface CreateTransactionRequest {
   accountId: string;
   date?: string;
