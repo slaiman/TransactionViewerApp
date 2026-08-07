@@ -38,8 +38,8 @@ export interface PaginationParams {
 
 export interface PageResponse<T> {
   content: T[];
-  pageNumber: number;
-  pageSize: number;
+  page: number;
+  size: number;
   totalElements: number;
   totalPages: number;
   last: boolean;

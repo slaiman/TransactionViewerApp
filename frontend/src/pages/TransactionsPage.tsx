@@ -239,7 +239,7 @@ export const TransactionsPage: React.FC = () => {
               pageNumber={page}
               totalPages={pageInfo.totalPages}
               totalElements={pageInfo.totalElements}
-              pageSize={pageInfo.pageSize}
+              pageSize={pageInfo.size}
               onPageChange={(newPage) => setPage(newPage)}
             />
           )}
