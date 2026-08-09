@@ -43,6 +43,13 @@ export async function createTransaction(
   return handleResponse<Transaction>(response);
 }
 
+export async function confirmTransaction(id: string): Promise<Transaction> {
+  const response = await fetch(`${BASE_URL}/${id}/confirm`, {
+    method: "PATCH",
+  });
+  return handleResponse<Transaction>(response);
+}
+
 export async function reverseTransaction(id: string): Promise<Transaction> {
   const response = await fetch(`${BASE_URL}/${id}/reverse`, {
     method: "PATCH",

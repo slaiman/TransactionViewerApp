@@ -83,6 +83,15 @@ public class TransactionController {
     }
 
     /**
+     * PATCH /api/transactions/{id}/confirm
+     * Confirms a transaction, moving it from PENDING to POSTED. Only valid if the transaction is currently PENDING.
+     */
+    @PatchMapping("/{id}/confirm")
+    public ResponseEntity<Transaction> confirmTransaction(@PathVariable String id) {
+        return ResponseEntity.ok(transactionService.confirmTransaction(id));
+    }
+
+    /**
      * PATCH /api/transactions/{id}/reverse
      * Reverses a transaction. Only valid if the transaction is currently POSTED.
      */

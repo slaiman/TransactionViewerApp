@@ -115,6 +115,93 @@ class TransactionServiceTest {
         assertThat(created.getDate()).isEqualTo(explicitDate);
     }
 
+    // ---- confirmTransaction (business rules) -------------------------------
+
+    @Test
+    void confirmTransaction_whenPending_setsStatusToPostedAndPersists() {
+        Transaction pending = transaction("txn-1", "acc-001", TransactionStatus.PENDING, LocalDate.now());
+        when(transactionRepositoryMock.findById("txn-1")).thenReturn(Optional.of(pending));
+
+        Transaction result = service.confirmTransaction("txn-1");
+
+        assertThat(result.getStatus()).isEqualTo(TransactionStatus.POSTED);
+        verify(transactionPersistenceServiceMock).persist(pending);
+    }
+
+    @Test
+    void confirmTransaction_whenAlreadyPosted_throwsInvalidTransactionStateException() {
+        Transaction posted = transaction("txn-2", "acc-001", TransactionStatus.POSTED, LocalDate.now());
+        when(transactionRepositoryMock.findById("txn-2")).thenReturn(Optional.of(posted));
+
+        assertThatThrownBy(() -> service.confirmTransaction("txn-2"))
+                .isInstanceOf(InvalidTransactionStateException.class)
+                .hasMessageContaining("PENDING");
+
+        verify(transactionPersistenceServiceMock, never()).persist(any());
+    }
+
+    @Test
+    void confirmTransaction_whenReversed_throwsInvalidTransactionStateException() {
+        Transaction reversed = transaction("txn-3", "acc-001", TransactionStatus.REVERSED, LocalDate.now());
+        when(transactionRepositoryMock.findById("txn-3")).thenReturn(Optional.of(reversed));
+
+        assertThatThrownBy(() -> service.confirmTransaction("txn-3"))
+                .isInstanceOf(InvalidTransactionStateException.class);
+
+        verify(transactionPersistenceServiceMock, never()).persist(any());
+    }
+
+    @Test
+    void confirmTransaction_whenNotFound_throwsTransactionNotFoundException() {
+        when(transactionRepositoryMock.findById("missing")).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> service.confirmTransaction("missing"))
+                .isInstanceOf(TransactionNotFoundException.class);
+
+        verify(transactionPersistenceServiceMock, never()).persist(any());
+    }
+
+    @Test
+    void confirmTransaction_underConcurrentAttempts_onlyOneSucceeds() throws InterruptedException {
+        TransactionRepository realRepository = new TransactionRepository();
+        realRepository.save(transaction("txn-race", "acc-001", TransactionStatus.PENDING, LocalDate.now()));
+
+        TransactionService realService = new TransactionService(realRepository, transactionPersistenceServiceMock);
+
+        int threadCount = 20;
+        ExecutorService pool = Executors.newFixedThreadPool(threadCount);
+        CountDownLatch startingGate = new CountDownLatch(1);
+        CountDownLatch finished = new CountDownLatch(threadCount);
+        AtomicInteger successCount = new AtomicInteger();
+        AtomicInteger conflictCount = new AtomicInteger();
+
+        for (int i = 0; i < threadCount; i++) {
+            pool.submit(() -> {
+                try {
+                    startingGate.await();
+                    realService.confirmTransaction("txn-race");
+                    successCount.incrementAndGet();
+                } catch (InvalidTransactionStateException e) {
+                    conflictCount.incrementAndGet();
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                } finally {
+                    finished.countDown();
+                }
+            });
+        }
+
+        startingGate.countDown();
+        boolean completedInTime = finished.await(10, TimeUnit.SECONDS);
+        pool.shutdown();
+
+        assertThat(completedInTime).isTrue();
+        assertThat(successCount.get()).isEqualTo(1);
+        assertThat(conflictCount.get()).isEqualTo(threadCount - 1);
+        assertThat(realRepository.findById("txn-race")).get()
+                .extracting(Transaction::getStatus).isEqualTo(TransactionStatus.POSTED);
+    }
+
     // ---- reverseTransaction (business rules) -------------------------------
 
     @Test

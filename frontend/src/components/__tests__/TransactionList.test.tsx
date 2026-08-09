@@ -24,13 +24,13 @@ const sample: Transaction[] = [
 
 describe("TransactionList", () => {
   it("shows an empty state message when there are no transactions", () => {
-    render(<TransactionList transactions={[]} onReverse={vi.fn()} />);
+    render(<TransactionList transactions={[]} onConfirm={vi.fn()} onReverse={vi.fn()} />);
 
     expect(screen.getByText("No transactions match this filter.")).toBeInTheDocument();
   });
 
   it("renders one row per transaction", () => {
-    render(<TransactionList transactions={sample} onReverse={vi.fn()} />);
+    render(<TransactionList transactions={sample} onConfirm={vi.fn()} onReverse={vi.fn()} />);
 
     expect(screen.getByText("Starbucks")).toBeInTheDocument();
     expect(screen.getByText("Netflix")).toBeInTheDocument();

@@ -3,7 +3,9 @@ import { StatusBadge } from "./StatusBadge";
 
 interface TransactionRowProps {
   transaction: Transaction;
+  onConfirm: (id: string) => void;
   onReverse: (id: string) => void;
+  isConfirming: boolean;
   isReversing: boolean;
 }
 
@@ -18,7 +20,14 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
-export function TransactionRow({ transaction, onReverse, isReversing }: TransactionRowProps) {
+export function TransactionRow({
+  transaction,
+  onConfirm,
+  onReverse,
+  isConfirming,
+  isReversing,
+}: TransactionRowProps) {
+  const canConfirm = transaction.status === "PENDING";
   const canReverse = transaction.status === "POSTED";
 
   return (
@@ -34,14 +43,24 @@ export function TransactionRow({ transaction, onReverse, isReversing }: Transact
         <StatusBadge status={transaction.status} />
       </td>
       <td className="py-3 text-right">
-        <button
-          type="button"
-          disabled={!canReverse || isReversing}
-          onClick={() => onReverse(transaction.id)}
-          className="rounded border border-ink/15 px-2.5 py-1 text-xs font-medium text-ink/70 transition-colors hover:enabled:border-accent hover:enabled:text-accent disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          {isReversing ? "Reversing…" : "Reverse"}
-        </button>
+        <div className="flex justify-end gap-2">
+          <button
+            type="button"
+            disabled={!canConfirm || isConfirming}
+            onClick={() => onConfirm(transaction.id)}
+            className="rounded border border-ink/15 px-2.5 py-1 text-xs font-medium text-ink/70 transition-colors hover:enabled:border-status-posted hover:enabled:text-status-posted disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            {isConfirming ? "Confirming…" : "Confirm"}
+          </button>
+          <button
+            type="button"
+            disabled={!canReverse || isReversing}
+            onClick={() => onReverse(transaction.id)}
+            className="rounded border border-ink/15 px-2.5 py-1 text-xs font-medium text-ink/70 transition-colors hover:enabled:border-accent hover:enabled:text-accent disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            {isReversing ? "Reversing…" : "Reverse"}
+          </button>
+        </div>
       </td>
     </tr>
   );

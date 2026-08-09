@@ -27,19 +27,27 @@ public class TransactionService {
     private final TransactionPersistenceService transactionPersistenceService;
 
     /**
-     * Per-transaction-id locks guarding the reverse operation's check-then-act
-     * sequence (read status, verify it's POSTED, then set it to REVERSED).
-     * computeIfAbsent atomically gets-or-creates the lock object for a given
-     * id, and different ids get independent lock objects — so reversing
-     * txn-A and txn-B concurrently is still fully parallel. Only concurrent
-     * attempts to reverse the *same* id are forced to serialize.
+     * Per-transaction-id locks guarding status-transition check-then-act
+     * sequences (read status, verify it's in the expected state, then set
+     * the new status) — used by both confirmTransaction (PENDING -> POSTED)
+     * and reverseTransaction (POSTED -> REVERSED). computeIfAbsent
+     * atomically gets-or-creates the lock object for a given id, and
+     * different ids get independent lock objects — so operating on txn-A
+     * and txn-B concurrently is still fully parallel.
+     *
+     * Both transitions share this one map rather than having separate locks
+     * per operation: if confirm and reverse used different locks, a
+     * concurrent confirm and reverse on the *same* transaction could
+     * interleave with no synchronization between them at all (e.g. reverse
+     * reading status while confirm is mid-write) — the exact class of race
+     * this locking exists to prevent in the first place.
      *
      * This map's size is bounded by the number of distinct transaction ids
-     * that have ever had a reversal attempted, which itself can't exceed the
-     * total number of transactions in the system — so it does not grow
+     * that have ever had a transition attempted, which itself can't exceed
+     * the total number of transactions in the system — so it does not grow
      * without bound over the app's lifetime.
      */
-    private final ConcurrentHashMap<String, Object> reversalLocks = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, Object> statusTransitionLocks = new ConcurrentHashMap<>();
 
     private static final Logger auditLogger = LoggerFactory.getLogger("TRANSACTION_LOGGER");
 
@@ -188,6 +196,54 @@ public class TransactionService {
     }
 
     /**
+     * Confirm a transaction, moving it from PENDING to POSTED — analogous to
+     * an authorization settling. Only transactions currently in PENDING
+     * status may be confirmed.
+     */
+    public Transaction confirmTransaction(String transactionId) {
+
+        log.info(
+                "Confirm request received transactionId={}",
+                transactionId
+        );
+
+        Object lock = statusTransitionLocks.computeIfAbsent(transactionId, id -> new Object());
+
+        synchronized (lock) {
+            Transaction transaction = transactionRepository.findById(transactionId)
+                    .orElseThrow(() -> new TransactionNotFoundException(transactionId));
+
+            TransactionStatus oldStatus = transaction.getStatus();
+
+            if (oldStatus != TransactionStatus.PENDING) {
+
+                log.info(
+                        "Cannot confirm transaction id={} currentStatus={}",
+                        transactionId,
+                        oldStatus
+                );
+
+                throw new InvalidTransactionStateException(
+                        "Only transactions with status PENDING can be confirmed. Current status: "
+                                + oldStatus);
+            }
+
+            transaction.setStatus(TransactionStatus.POSTED);
+            transactionPersistenceService.persist(transaction);
+
+            auditLogger.info(
+                    "CONFIRM_TRANSACTION id={} accountId={} oldStatus={} newStatus={}",
+                    transaction.getId(),
+                    transaction.getAccountId(),
+                    oldStatus,
+                    transaction.getStatus()
+            );
+
+            return transaction;
+        }
+    }
+
+    /**
      * Reverse a transaction. Only transactions currently in POSTED status may
      * be reversed.
      */
@@ -198,7 +254,7 @@ public class TransactionService {
                 transactionId
         );
 
-        Object lock = reversalLocks.computeIfAbsent(transactionId, id -> new Object());
+        Object lock = statusTransitionLocks.computeIfAbsent(transactionId, id -> new Object());
 
         synchronized (lock) {
             Transaction transaction = transactionRepository.findById(transactionId)

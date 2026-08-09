@@ -4,11 +4,19 @@ import { TransactionRow } from "./TransactionRow";
 
 interface TransactionListProps {
   transactions: Transaction[];
+  onConfirm: (id: string) => Promise<void>;
   onReverse: (id: string) => Promise<void>;
 }
 
-export function TransactionList({ transactions, onReverse }: TransactionListProps) {
+export function TransactionList({ transactions, onConfirm, onReverse }: TransactionListProps) {
+  const [confirmingId, setConfirmingId] = useState<string | null>(null);
   const [reversingId, setReversingId] = useState<string | null>(null);
+
+  const handleConfirm = async (id: string) => {
+    setConfirmingId(id);
+    await onConfirm(id);
+    setConfirmingId(null);
+  };
 
   const handleReverse = async (id: string) => {
     setReversingId(id);
@@ -41,7 +49,9 @@ export function TransactionList({ transactions, onReverse }: TransactionListProp
             <TransactionRow
               key={transaction.id}
               transaction={transaction}
+              onConfirm={handleConfirm}
               onReverse={handleReverse}
+              isConfirming={confirmingId === transaction.id}
               isReversing={reversingId === transaction.id}
             />
           ))}

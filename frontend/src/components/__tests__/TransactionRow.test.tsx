@@ -16,57 +16,43 @@ function buildTransaction(overrides: Partial<Transaction> = {}): Transaction {
   };
 }
 
-describe("TransactionRow", () => {
-  it("enables the Reverse button when status is POSTED", () => {
-    render(
-      <table>
-        <tbody>
-          <TransactionRow transaction={buildTransaction({ status: "POSTED" })} onReverse={vi.fn()} isReversing={false} />
-        </tbody>
-      </table>,
-    );
+function renderRow(overrides: Partial<Transaction> = {}, props: Record<string, unknown> = {}) {
+  return render(
+    <table>
+      <tbody>
+        <TransactionRow
+          transaction={buildTransaction(overrides)}
+          onConfirm={vi.fn()}
+          onReverse={vi.fn()}
+          isConfirming={false}
+          isReversing={false}
+          {...props}
+        />
+      </tbody>
+    </table>,
+  );
+}
 
+describe("TransactionRow — Reverse action", () => {
+  it("enables the Reverse button when status is POSTED", () => {
+    renderRow({ status: "POSTED" });
     expect(screen.getByRole("button", { name: "Reverse" })).toBeEnabled();
   });
 
   it("disables the Reverse button when status is PENDING", () => {
-    render(
-      <table>
-        <tbody>
-          <TransactionRow transaction={buildTransaction({ status: "PENDING" })} onReverse={vi.fn()} isReversing={false} />
-        </tbody>
-      </table>,
-    );
-
+    renderRow({ status: "PENDING" });
     expect(screen.getByRole("button", { name: "Reverse" })).toBeDisabled();
   });
 
   it("disables the Reverse button when status is already REVERSED", () => {
-    render(
-      <table>
-        <tbody>
-          <TransactionRow transaction={buildTransaction({ status: "REVERSED" })} onReverse={vi.fn()} isReversing={false} />
-        </tbody>
-      </table>,
-    );
-
+    renderRow({ status: "REVERSED" });
     expect(screen.getByRole("button", { name: "Reverse" })).toBeDisabled();
   });
 
   it("calls onReverse with the transaction id when clicked", async () => {
     const user = userEvent.setup();
     const onReverse = vi.fn();
-    render(
-      <table>
-        <tbody>
-          <TransactionRow
-            transaction={buildTransaction({ id: "txn-42", status: "POSTED" })}
-            onReverse={onReverse}
-            isReversing={false}
-          />
-        </tbody>
-      </table>,
-    );
+    renderRow({ id: "txn-42", status: "POSTED" }, { onReverse });
 
     await user.click(screen.getByRole("button", { name: "Reverse" }));
 
@@ -74,27 +60,46 @@ describe("TransactionRow", () => {
   });
 
   it("shows a pending label and disables the button while reversing", () => {
-    render(
-      <table>
-        <tbody>
-          <TransactionRow transaction={buildTransaction({ status: "POSTED" })} onReverse={vi.fn()} isReversing={true} />
-        </tbody>
-      </table>,
-    );
+    renderRow({ status: "POSTED" }, { isReversing: true });
+    expect(screen.getByRole("button", { name: "Reversing…" })).toBeDisabled();
+  });
+});
 
-    const button = screen.getByRole("button", { name: "Reversing…" });
-    expect(button).toBeDisabled();
+describe("TransactionRow — Confirm action", () => {
+  it("enables the Confirm button when status is PENDING", () => {
+    renderRow({ status: "PENDING" });
+    expect(screen.getByRole("button", { name: "Confirm" })).toBeEnabled();
   });
 
-  it("formats the amount as currency", () => {
-    render(
-      <table>
-        <tbody>
-          <TransactionRow transaction={buildTransaction({ amount: 1234.5 })} onReverse={vi.fn()} isReversing={false} />
-        </tbody>
-      </table>,
-    );
+  it("disables the Confirm button when status is POSTED", () => {
+    renderRow({ status: "POSTED" });
+    expect(screen.getByRole("button", { name: "Confirm" })).toBeDisabled();
+  });
 
+  it("disables the Confirm button when status is REVERSED", () => {
+    renderRow({ status: "REVERSED" });
+    expect(screen.getByRole("button", { name: "Confirm" })).toBeDisabled();
+  });
+
+  it("calls onConfirm with the transaction id when clicked", async () => {
+    const user = userEvent.setup();
+    const onConfirm = vi.fn();
+    renderRow({ id: "txn-42", status: "PENDING" }, { onConfirm });
+
+    await user.click(screen.getByRole("button", { name: "Confirm" }));
+
+    expect(onConfirm).toHaveBeenCalledWith("txn-42");
+  });
+
+  it("shows a pending label and disables the button while confirming", () => {
+    renderRow({ status: "PENDING" }, { isConfirming: true });
+    expect(screen.getByRole("button", { name: "Confirming…" })).toBeDisabled();
+  });
+});
+
+describe("TransactionRow — formatting", () => {
+  it("formats the amount as currency", () => {
+    renderRow({ amount: 1234.5 });
     expect(screen.getByText("$1,234.50")).toBeInTheDocument();
   });
 });

@@ -3,6 +3,7 @@ import { useTransactions } from '../hooks/useTransactions';
 import { useAccounts } from '../hooks/useAccounts';
 import type { SortBy, SortDirection, TransactionStatus } from '../types/transaction';
 import { TransactionList } from '../components/TransactionList';
+import { NewTransactionForm } from '../components/NewTransactionForm';
 import { AccountFilterOption } from '../types/transaction';
 import { Pagination } from '../components/Pagination';
 
@@ -27,7 +28,10 @@ export const TransactionsPage: React.FC = () => {
     loading,
     error,
     filter,
-    setFilter
+    setFilter,
+    create,
+    confirm,
+    reverse,
   } = useTransactions(selectedAccountId);
 
   // Sync selectedAccountId state changes with filter state
@@ -86,6 +90,15 @@ export const TransactionsPage: React.FC = () => {
           </select>
         </div>
       </div>
+
+      {/* Create Transaction */}
+      {selectedAccountId && selectedAccountId !== AccountFilterOption.ALL ? (
+        <NewTransactionForm accountId={selectedAccountId} onCreate={create} />
+      ) : (
+        <p className="text-sm text-gray-500">
+          Select a specific account (not "All Accounts") to simulate a new purchase.
+        </p>
+      )}
 
       {/* Filter Control Panel */}
       <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm space-y-4">
@@ -231,7 +244,7 @@ export const TransactionsPage: React.FC = () => {
         <div className="p-4 bg-red-50 text-red-600 rounded-md border border-red-200">{error}</div>
       ) : (
         <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-          <TransactionList transactions={transactions} />
+          <TransactionList transactions={transactions} onConfirm={confirm} onReverse={reverse} />
 
           {/* Render Pagination Footer */}
           {pageInfo && pageInfo.totalPages > 0 && (

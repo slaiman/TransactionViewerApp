@@ -1,6 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { Transaction, TransactionFilterParams, PageResponse } from '../types/transaction';
-import { fetchFilteredTransactions } from '../api/transactionsApi';
+import type { CreateTransactionRequest, Transaction, TransactionFilterParams, PageResponse } from '../types/transaction';
+import {
+  fetchFilteredTransactions,
+  createTransaction as apiCreateTransaction,
+  confirmTransaction as apiConfirmTransaction,
+  reverseTransaction as apiReverseTransaction,
+} from '../api/transactionsApi';
 
 export const useTransactions = (initialAccountId: string) => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -34,17 +39,18 @@ export const useTransactions = (initialAccountId: string) => {
       setLoading(true);
       setError(null);
 
-      const requestParams = {
+      const requestFilter = {
         ...filter,
         accountId: activeAccountId,
-        page,
-        size: pageSize,
       };
 
-      console.log("Executing fetch with params:", requestParams);
+      console.log("Executing fetch with filter:", requestFilter, "page:", page, "size:", pageSize);
 
       // fetchFilteredTransactions returns PageResponse<Transaction>
-      const response: PageResponse<Transaction> = await fetchFilteredTransactions(requestParams);
+      const response: PageResponse<Transaction> = await fetchFilteredTransactions(requestFilter, {
+        page,
+        size: pageSize,
+      });
       console.log("Fetched data successfully:", response);
 
       // Set items and full page Metadata
@@ -70,6 +76,48 @@ export const useTransactions = (initialAccountId: string) => {
     setPage(0); // Go back to first page on filter change
   };
 
+  const create = useCallback(
+    async (request: CreateTransactionRequest) => {
+      setError(null);
+      try {
+        await apiCreateTransaction(request);
+        await loadTransactions();
+      } catch (err: any) {
+        console.error("Error creating transaction:", err);
+        setError(err.message || 'Failed to create transaction');
+      }
+    },
+    [loadTransactions],
+  );
+
+  const confirm = useCallback(
+    async (id: string) => {
+      setError(null);
+      try {
+        await apiConfirmTransaction(id);
+        await loadTransactions();
+      } catch (err: any) {
+        console.error("Error confirming transaction:", err);
+        setError(err.message || 'Failed to confirm transaction');
+      }
+    },
+    [loadTransactions],
+  );
+
+  const reverse = useCallback(
+    async (id: string) => {
+      setError(null);
+      try {
+        await apiReverseTransaction(id);
+        await loadTransactions();
+      } catch (err: any) {
+        console.error("Error reversing transaction:", err);
+        setError(err.message || 'Failed to reverse transaction');
+      }
+    },
+    [loadTransactions],
+  );
+
   return {
     transactions,
     pageInfo,
@@ -81,6 +129,9 @@ export const useTransactions = (initialAccountId: string) => {
     error,
     filter,
     setFilter: handleSetFilter,
+    create,
+    confirm,
+    reverse,
     refetch: loadTransactions,
   };
 };
