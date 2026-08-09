@@ -1,4 +1,4 @@
-export type View = "transactions" | "dashboard";
+export type View = "transactions" | "dashboard" | "accounts";
 
 interface NavTabsProps {
   active: View;
@@ -8,6 +8,7 @@ interface NavTabsProps {
 const TABS: Array<{ value: View; label: string }> = [
   { value: "transactions", label: "Transactions" },
   { value: "dashboard", label: "Dashboard" },
+  { value: "accounts", label: "Accounts" },
 ];
 
 export function NavTabs({ active, onChange }: NavTabsProps) {

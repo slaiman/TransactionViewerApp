@@ -28,6 +28,28 @@ public class GlobalExceptionHandler {
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request);
     }
 
+    @ExceptionHandler(AccountNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleAccountNotFound(AccountNotFoundException ex,
+                                                        HttpServletRequest request) {
+        log.warn(
+                "Account not found path={} message={}",
+                request.getRequestURI(),
+                ex.getMessage()
+        );
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request);
+    }
+
+    @ExceptionHandler(AccountHasTransactionsException.class)
+    public ResponseEntity<ErrorResponse> handleAccountHasTransactions(AccountHasTransactionsException ex,
+                                                        HttpServletRequest request) {
+        log.warn(
+                "Blocked account deletion path={} message={}",
+                request.getRequestURI(),
+                ex.getMessage()
+        );
+        return buildResponse(HttpStatus.CONFLICT, ex.getMessage(), request);
+    }
+
     @ExceptionHandler(InvalidTransactionStateException.class)
     public ResponseEntity<ErrorResponse> handleInvalidState(InvalidTransactionStateException ex,
                                                             HttpServletRequest request) {

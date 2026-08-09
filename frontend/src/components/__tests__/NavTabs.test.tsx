@@ -20,4 +20,14 @@ describe("NavTabs", () => {
 
     expect(onChange).toHaveBeenCalledWith("dashboard");
   });
+
+  it("renders an Accounts tab", async () => {
+    const user = userEvent.setup();
+    const onChange = vi.fn();
+    render(<NavTabs active="transactions" onChange={onChange} />);
+
+    await user.click(screen.getByRole("button", { name: "Accounts" }));
+
+    expect(onChange).toHaveBeenCalledWith("accounts");
+  });
 });

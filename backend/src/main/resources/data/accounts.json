@@ -1,0 +1,152 @@
+[
+  {
+    "id": "acc-001",
+    "accountHolderName": "Alice Johnson",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-002",
+    "accountHolderName": "Bob Smith",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-003",
+    "accountHolderName": "Carla Diaz",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-004",
+    "accountHolderName": "David Chen",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-005",
+    "accountHolderName": "Elena Petrova",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-006",
+    "accountHolderName": "Frank Osei",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-007",
+    "accountHolderName": "Grace Kim",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-008",
+    "accountHolderName": "Hassan Ali",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-009",
+    "accountHolderName": "Isla Murphy",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-010",
+    "accountHolderName": "Jamal Carter",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-011",
+    "accountHolderName": "Katarzyna Nowak",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-012",
+    "accountHolderName": "Liam OBrien",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-013",
+    "accountHolderName": "Mei Tanaka",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-014",
+    "accountHolderName": "Noah Williams",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-015",
+    "accountHolderName": "Olga Sokolova",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-016",
+    "accountHolderName": "Priya Nair",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-017",
+    "accountHolderName": "Quentin Roy",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-018",
+    "accountHolderName": "Rosa Fernandez",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-019",
+    "accountHolderName": "Sven Andersson",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-020",
+    "accountHolderName": "Tariq Rahman",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-021",
+    "accountHolderName": "Uma Iyer",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-022",
+    "accountHolderName": "Victor Hugo",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-023",
+    "accountHolderName": "Wanjiru Kamau",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-024",
+    "accountHolderName": "Xavier Dubois",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  },
+  {
+    "id": "acc-025",
+    "accountHolderName": "Yuki Sato",
+    "status": "ACTIVE",
+    "createdDate": "2025-01-15"
+  }
+]
