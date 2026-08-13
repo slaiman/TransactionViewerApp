@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(TransactionNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleNotFound(TransactionNotFoundException ex,
                                                         HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Transaction not found path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(AccountNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleAccountNotFound(AccountNotFoundException ex,
                                                         HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Account not found path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -42,7 +42,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(AccountHasTransactionsException.class)
     public ResponseEntity<ErrorResponse> handleAccountHasTransactions(AccountHasTransactionsException ex,
                                                         HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Blocked account deletion path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -53,7 +53,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InvalidTransactionStateException.class)
     public ResponseEntity<ErrorResponse> handleInvalidState(InvalidTransactionStateException ex,
                                                             HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Invalid transaction operation path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -64,7 +64,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InvalidFilterException.class)
     public ResponseEntity<ErrorResponse> handleInvalidFilter(InvalidFilterException ex,
                                                              HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Invalid filter parameters path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -75,7 +75,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex,
                                                           HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Method argument not valid path={} message={}",
                 request.getRequestURI(),
                 ex.getMessage()
@@ -89,7 +89,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ErrorResponse> handleTypeMismatch(MethodArgumentTypeMismatchException ex,
                                                             HttpServletRequest request) {
-        log.warn(
+        log.error(
                 "Malformed query parameter path={} name={} value={}",
                 request.getRequestURI(),
                 ex.getName(),

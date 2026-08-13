@@ -2,6 +2,7 @@ package com.neo.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.neo.exception.AccountNotFoundException;
 import com.neo.model.Account;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
@@ -135,7 +136,9 @@ public class AccountRepository {
     }
 
     public synchronized void deleteById(String id) {
-        accounts.remove(id);
+        if(accounts.remove(id) == null){
+            throw new AccountNotFoundException("Failed to delete account %s".formatted(id));
+        }
         writeThrough();
     }
 
@@ -163,7 +166,7 @@ public class AccountRepository {
         try {
             Files.deleteIfExists(path);
         } catch (IOException e) {
-            log.warn("Failed to clean up temporary file {}", path, e);
+            log.error("Failed to clean up temporary file {}", path, e);
         }
     }
 }

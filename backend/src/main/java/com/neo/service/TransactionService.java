@@ -3,9 +3,11 @@ package com.neo.service;
 import com.neo.dto.*;
 import com.neo.exception.InvalidTransactionStateException;
 import com.neo.exception.TransactionNotFoundException;
+import com.neo.model.Account;
 import com.neo.model.AccountType;
 import com.neo.model.Transaction;
 import com.neo.model.TransactionStatus;
+import com.neo.repository.AccountRepository;
 import com.neo.repository.TransactionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -24,6 +26,7 @@ import java.util.stream.Stream;
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;
+    private final AccountRepository accountRepository;
     private final TransactionPersistenceService transactionPersistenceService;
 
     /**
@@ -51,8 +54,9 @@ public class TransactionService {
 
     private static final Logger auditLogger = LoggerFactory.getLogger("TRANSACTION_LOGGER");
 
-    public TransactionService(TransactionRepository transactionRepository, TransactionPersistenceService transactionPersistenceService) {
+    public TransactionService(TransactionRepository transactionRepository, AccountRepository accountRepository,TransactionPersistenceService transactionPersistenceService) {
         this.transactionRepository = transactionRepository;
+        this.accountRepository = accountRepository;
         this.transactionPersistenceService = transactionPersistenceService;
     }
 
@@ -60,7 +64,9 @@ public class TransactionService {
      * Retrieve all Account IDs.
      */
     public List<String> getAccounts() {
-        return transactionRepository.findAllAccounts();
+        List<String> transactionAccounts = transactionRepository.findAllAccounts();
+        List<String> updatedAccounts = accountRepository.findAll().stream().map(Account::getId).toList();
+        return Stream.concat(transactionAccounts.stream(),updatedAccounts.stream()).distinct().toList();
     }
 
     /**

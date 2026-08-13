@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 
 @Slf4j
@@ -34,7 +35,7 @@ public class AccountService {
     }
 
     public List<AccountResponse> getAccounts() {
-        return accountRepository.findAll().stream()
+        return accountRepository.findAll().stream().sorted(Comparator.comparing(Account::getId))
                 .map(this::toResponse)
                 .toList();
     }
@@ -96,7 +97,6 @@ public class AccountService {
      * than cascaded.
      */
     public void deleteAccount(String id) {
-        findAccountOrThrow(id);
 
         long transactionCount = transactionRepository.findByAccountId(id).size();
         if (transactionCount > 0) {
@@ -104,8 +104,12 @@ public class AccountService {
         }
 
         accountRepository.deleteById(id);
-
-        auditLogger.info("DELETE_ACCOUNT id={}", id);
+        if(!transactionRepository.deleteByUserId(id)){
+            auditLogger.info(
+                    "Failed to delete user from transactions {}", id
+            );
+        }
+        else auditLogger.info("DELETE_ACCOUNT id={}", id);
     }
 
     /**

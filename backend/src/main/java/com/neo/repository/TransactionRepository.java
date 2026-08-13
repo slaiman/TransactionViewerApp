@@ -1,13 +1,12 @@
 package com.neo.repository;
 
-import com.neo.dto.PageResponse;
-import com.neo.dto.PaginationRequest;
 import com.neo.model.Transaction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -81,6 +80,14 @@ public class TransactionRepository {
         indexTransaction(transaction);
 
         return transaction;
+    }
+
+    public boolean deleteByUserId(String userId){
+        log.info(
+                "Executing 'deleteByUserId' method in TransactionRepository"
+        );
+        Set<String> trans = transactions.values().stream().filter(x -> x.getAccountId().equals(userId)).map(Transaction::getId).collect(Collectors.toSet());
+        return transactions.keySet().removeAll(trans) & accountTransactions.remove(userId, trans);
     }
 
     private void indexTransaction(Transaction transaction){

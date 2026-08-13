@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 1.9.6 (adding pagination feature)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+    <list default="true" id="e747c1f8-b042-4d1b-9168-afb0f0c71224" name="Changes" comment="Version 2.1.0 (adding accounts page to manage accounts)">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AccountFormModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AccountStatusBadge.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AccountsTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/DeleteAccountDialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useAccountManagement.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AccountsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/types/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/AccountRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/neo/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/neo/TransactionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +98,7 @@
       <recent name="C:\Users\ASUS\IdeaProjects\TransactionViewerApp\scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TransactionViewerApplication">
+  <component name="RunManager" selected="Diffblue Cover.Write tests for method AccountService.deleteAccount">
     <configuration name="TransactionViewerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.neo.TransactionViewerApplication" />
       <module name="backend" />
@@ -132,6 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Write tests for method AccountService.deleteAccount" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="backend" />
+      <settings run-config-name="Write tests for method AccountService.deleteAccount" include-system-env-vars="true" skeleton-tests-only="false">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.neo.service.AccountService.deleteAccount:(Ljava/lang/String;)V" />
+      </settings>
+      <method v="2" />
+    </configuration>
     <configuration name="Write tests for package " type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
       <module name="TransactionViewerApp" />
       <settings run-config-name="Write tests for package " include-system-env-vars="true" skeleton-tests-only="false">
@@ -143,6 +162,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Diffblue Cover.Write tests for method AccountService.deleteAccount" />
         <item itemvalue="Application.TransactionViewerApplication" />
         <item itemvalue="JUnit.TransactionRepositoryTest" />
         <item itemvalue="JUnit.TransactionServiceTest" />
@@ -271,7 +291,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786086299707</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Version 2.0.0 (adding confirmation option for transactions)">
+      <option name="closed" value="true" />
+      <created>1786252173106</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1786252173106</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Version 2.1.0 (adding accounts page to manage accounts)">
+      <option name="closed" value="true" />
+      <created>1786264712121</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1786264712121</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +348,8 @@
     <MESSAGE value="Version 1.9.4 (adding pagination feature)" />
     <MESSAGE value="Version 1.9.5 (adding pagination feature)" />
     <MESSAGE value="Version 1.9.6 (adding pagination feature)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.6 (adding pagination feature)" />
+    <MESSAGE value="Version 2.0.0 (adding confirmation option for transactions)" />
+    <MESSAGE value="Version 2.1.0 (adding accounts page to manage accounts)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 2.1.0 (adding accounts page to manage accounts)" />
   </component>
 </project>
