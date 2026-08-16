@@ -28,6 +28,7 @@ public class TransactionService {
     private final TransactionRepository transactionRepository;
     private final AccountRepository accountRepository;
     private final TransactionPersistenceService transactionPersistenceService;
+    private final AuditService auditService;
 
     /**
      * Per-transaction-id locks guarding status-transition check-then-act
@@ -39,7 +40,7 @@ public class TransactionService {
      * and txn-B concurrently is still fully parallel.
      *
      * Both transitions share this one map rather than having separate locks
-     * per operation: if confirm and reverse used different locks, a
+     * per operation: If transaction status is "confirm" or "reverse" used different locks, a
      * concurrent confirm and reverse on the *same* transaction could
      * interleave with no synchronization between them at all (e.g. reverse
      * reading status while confirm is mid-write) — the exact class of race
@@ -54,10 +55,11 @@ public class TransactionService {
 
     private static final Logger auditLogger = LoggerFactory.getLogger("TRANSACTION_LOGGER");
 
-    public TransactionService(TransactionRepository transactionRepository, AccountRepository accountRepository,TransactionPersistenceService transactionPersistenceService) {
+    public TransactionService(TransactionRepository transactionRepository, AccountRepository accountRepository, TransactionPersistenceService transactionPersistenceService, AuditService auditService) {
         this.transactionRepository = transactionRepository;
         this.accountRepository = accountRepository;
         this.transactionPersistenceService = transactionPersistenceService;
+        this.auditService = auditService;
     }
 
     /**
@@ -128,7 +130,6 @@ public class TransactionService {
         }
         else result = stream.toList();
 
-
         log.info(
                 "Retrieved {} transactions for accountId={}",
                 result.size(),
@@ -189,6 +190,10 @@ public class TransactionService {
         Transaction saved = transactionRepository.save(transaction);
         transactionPersistenceService.persist(saved);
 
+        auditService.recordTransactionCreated(
+                transaction
+        );
+
         auditLogger.info(
                 "CREATE_TRANSACTION id={} accountId={} merchant={} amount={} status={}",
                 saved.getId(),
@@ -237,6 +242,12 @@ public class TransactionService {
             transaction.setStatus(TransactionStatus.POSTED);
             transactionPersistenceService.persist(transaction);
 
+            auditService.recordTransactionStatusChange(
+                    transaction,
+                    oldStatus.name(),
+                    transaction.getStatus().name()
+            );
+
             auditLogger.info(
                     "CONFIRM_TRANSACTION id={} accountId={} oldStatus={} newStatus={}",
                     transaction.getId(),
@@ -284,6 +295,11 @@ public class TransactionService {
             transaction.setStatus(TransactionStatus.REVERSED);
             transactionPersistenceService.persist(transaction);
 
+            auditService.recordTransactionStatusChange(
+                    transaction,
+                    oldStatus.name(),
+                    transaction.getStatus().name()
+            );
             auditLogger.info(
                     "REVERSE_TRANSACTION id={} accountId={} oldStatus={} newStatus={}",
                     transaction.getId(),
