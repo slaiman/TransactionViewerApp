@@ -3,6 +3,7 @@ import { NavTabs, type View } from "./components/NavTabs";
 import { TransactionsPage } from "./pages/TransactionsPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { AccountsPage } from "./pages/AccountsPage";
+import { AuditPage } from "./pages/AuditPage";
 
 function App() {
   const [activeView, setActiveView] = useState<View>("transactions");
@@ -14,6 +15,7 @@ function App() {
         {activeView === "transactions" && <TransactionsPage />}
         {activeView === "dashboard" && <DashboardPage />}
         {activeView === "accounts" && <AccountsPage />}
+        {activeView === "audit" && <AuditPage />}
       </div>
     </div>
   );

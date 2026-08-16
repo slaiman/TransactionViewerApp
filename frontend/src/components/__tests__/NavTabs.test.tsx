@@ -30,4 +30,14 @@ describe("NavTabs", () => {
 
     expect(onChange).toHaveBeenCalledWith("accounts");
   });
+
+  it("renders an Audit Log tab", async () => {
+    const user = userEvent.setup();
+    const onChange = vi.fn();
+    render(<NavTabs active="transactions" onChange={onChange} />);
+
+    await user.click(screen.getByRole("button", { name: "Audit Log" }));
+
+    expect(onChange).toHaveBeenCalledWith("audit");
+  });
 });
