@@ -9,7 +9,6 @@ import com.neo.model.Transaction;
 import com.neo.model.TransactionStatus;
 import com.neo.repository.AccountRepository;
 import com.neo.repository.TransactionRepository;
-import com.neo.service.AuditService;
 import com.neo.service.TransactionPersistenceService;
 import com.neo.service.TransactionService;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,9 +39,6 @@ class TransactionServiceTest {
     private AccountRepository accountRepository;
 
     @Mock
-    private AuditService auditService;
-
-    @Mock
     private TransactionPersistenceService transactionPersistenceServiceMock;
 
     private TransactionService service;
@@ -50,7 +46,7 @@ class TransactionServiceTest {
     @BeforeEach
     void setUp() {
         org.mockito.MockitoAnnotations.openMocks(this);
-        service = new TransactionService(transactionRepositoryMock, accountRepository,transactionPersistenceServiceMock,auditService);
+        service = new TransactionService(transactionRepositoryMock, accountRepository,transactionPersistenceServiceMock);
     }
 
     private static Transaction transaction(String id, String accountId, TransactionStatus status, LocalDate date) {
@@ -174,7 +170,7 @@ class TransactionServiceTest {
         TransactionRepository realRepository = new TransactionRepository();
         realRepository.save(transaction("txn-race", "acc-001", TransactionStatus.PENDING, LocalDate.now()));
 
-        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock, auditService);
+        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock);
 
         int threadCount = 20;
         ExecutorService pool = Executors.newFixedThreadPool(threadCount);
@@ -272,7 +268,7 @@ class TransactionServiceTest {
         TransactionRepository realRepository = new TransactionRepository();
         realRepository.save(transaction("txn-race", "acc-001", TransactionStatus.POSTED, LocalDate.now()));
 
-        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock, auditService);
+        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock);
 
         int threadCount = 20;
         ExecutorService pool = Executors.newFixedThreadPool(threadCount);
@@ -315,7 +311,7 @@ class TransactionServiceTest {
         realRepository.save(transaction("txn-a", "acc-001", TransactionStatus.POSTED, LocalDate.now()));
         realRepository.save(transaction("txn-b", "acc-001", TransactionStatus.POSTED, LocalDate.now()));
 
-        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock, auditService);
+        TransactionService realService = new TransactionService(realRepository, accountRepository,transactionPersistenceServiceMock);
 
         ExecutorService pool = Executors.newFixedThreadPool(2);
         CountDownLatch finished = new CountDownLatch(2);

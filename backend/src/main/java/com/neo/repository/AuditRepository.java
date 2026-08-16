@@ -15,6 +15,19 @@ public class AuditRepository {
     private final ConcurrentHashMap<String, AuditEvent> events =
             new ConcurrentHashMap<>();
 
+    /**
+     * Populates the in-memory store from a previously-persisted set of
+     * events, e.g. on application startup. Distinct from save() so callers
+     * (AuditPersistenceService.load()) don't trigger a redundant enqueue for
+     * persistence of data that's already on disk.
+     */
+    public void loadAll(List<AuditEvent> loadedEvents) {
+        for (AuditEvent event : loadedEvents) {
+            events.put(event.getId(), event);
+        }
+        log.info("{} audit events loaded into memory", loadedEvents.size());
+    }
+
     public AuditEvent save(AuditEvent event) {
 
         log.info(

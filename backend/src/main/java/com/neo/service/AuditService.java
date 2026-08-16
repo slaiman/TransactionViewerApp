@@ -17,6 +17,7 @@ import java.util.UUID;
 public class AuditService {
 
     private final AuditRepository auditRepository;
+    private final AuditPersistenceService auditPersistenceService;
 
     public void recordTransactionStatusChange(
             Transaction transaction,
@@ -36,6 +37,7 @@ public class AuditService {
                 .build();
 
         auditRepository.save(event);
+        auditPersistenceService.enqueue(event);
 
         log.info(
                 "Audit event recorded transactionId={} oldStatus={} newStatus={}",
@@ -59,6 +61,7 @@ public class AuditService {
                 .build();
 
         auditRepository.save(event);
+        auditPersistenceService.enqueue(event);
 
         log.info(
                 "Audit event recorded for transaction creation id={}",
